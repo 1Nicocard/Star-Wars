@@ -4,10 +4,20 @@
 <head>
     <title> Star Wars </title>
     <link rel="stylesheet" href="../Styles/Main.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <section>
+
         <!--Barra de navegacion______________________________________________________________________ -->
 
         <header class="header">
@@ -41,6 +51,7 @@
                                     MÁS INFO
                                 </a>
                             </li>
+
                         </ul>
 
                     </div>
@@ -61,7 +72,7 @@
         <div id="fondo1">
             <img src="../Assets/fondo1.jpg" width="1900px">
         </div>
-        <div class="container2">
+        <di v class="container2">
             <div class="intro">
                 <p>Holocrón Galáctico es el sitio ideal para los fanáticos de Star Wars que desean explorar a fondo su
                     vasto universo. Aquí podrás descubrir historias ocultas, personajes emblemáticos y detalles curiosos
@@ -74,14 +85,22 @@
                     <h2>¡Atrévete a descubrir los secretos de la galaxia!</h2>
                     <br><br><br>
                 </div>
+
                 <button class="botones1">COMIENZA AHORA</button>
 
-                <div id="linea">
-                    <img src="https://www.viniloscasa.com/33050-thickbox/vinilos-y-pegatinas-star-wars-simbolo-de-la-orden-jedi.jpg"
-                        alt="" width="60px">
-                </div>
+
+
 
             </div>
+
+        </div>
+
+        <div class="linea">
+            <center><img
+                    src="https://www.viniloscasa.com/33050-thickbox/vinilos-y-pegatinas-star-wars-simbolo-de-la-orden-jedi.jpg"
+                    alt="" width="60px">
+            </center>
+        </div>
 
     </section>
 
@@ -90,9 +109,9 @@
     <section>
 
         <div class="container3">
+
             <div>
                 <img src="../Assets/yoda.webp" alt="">
-
             </div>
 
             <div class="quienes">
@@ -112,25 +131,31 @@
                     intergaláctica. ¡Acompáñanos en esta travesía por la galaxia!
                 </p>
                 <br><br><br>
-                <div class="Botonesss">
 
+                <div class="Botonesss">
                     <div> <button class="botones2">galalala</button></div>
                     <div> <button class="botones2">ssssssssss</button></div>
-
                 </div>
-
 
             </div>
 
             <div class="R2-D2">
                 <img src="../Assets/R2-D2.webp" alt="" width="450px">
             </div>
+
         </div>
 
     </section>
 
 
     <!--Carrusel_______________________________________________________________________________________________________ -->
+   
+    <div class="mensajecarrusel">
+        <div class="linea2"></div>
+        <div class="mensajito"><h1>CONOCE MÁS</h1></div>
+        <div class="linea2"></div>
+    </div>
+
 
     <div id="slider">
         <input type="radio" name="slider" id="slide1" checked>
@@ -138,76 +163,115 @@
         <input type="radio" name="slider" id="slide3">
         <input type="radio" name="slider" id="slide4">
         <div id="slides">
-           <div id="overflow">
-              <div class="inner">
-                 <div class="slide slide_1">
-                    <div class="slide-content">
-                       <img src="../Assets/fondo1.jpg" alt="" width="1800px" he>
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <img src="../Assets/fotocarrusel2.jpg" alt="" width="1860px" height="900px">
+                        </div>
                     </div>
-                 </div>
-                 <div class="slide slide_2">
-                    <div class="slide-content">
-                       <img src="" alt="">
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <img src="../Assets/fotocarrusel1.jpg" alt="" width="1775px" height="900px">
+                        </div>
                     </div>
-                 </div>
-                 <div class="slide slide_3">
-                    <div class="slide-content">
-                       <img src="" alt="">
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <img src="" alt="">
+                        </div>
                     </div>
-                 </div>
-                 <div class="slide slide_4">
-                    <div class="slide-content">
-                       <img src="" alt="">
+                    <div class="slide slide_4">
+                        <div class="slide-content">
+                            <img src="" alt="">
+                        </div>
                     </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div id="controls">
-           <label for="slide1"></label>
-           <label for="slide2"></label>
-           <label for="slide3"></label>
-           <label for="slide4"></label>
-        </div>
-        <div id="bullets">
-           <label for="slide1"></label>
-           <label for="slide2"></label>
-           <label for="slide3"></label>
-           <label for="slide4"></label>
-        </div>
-     </div>
-
-
-        <!--Boton______________________________________________________________________ -->
-
-        <div class="Boto">
-            <div>
-                <button class="botones3">¡COMIENZA AHORA! <img src="../Assets/yoda.webp" alt="" width="50px"></button>
+                </div>
             </div>
         </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+    </div>
+
+
+    <!--Boton______________________________________________________________________ -->
+
+    <div class="Boto">
+        <div>
+            <button class="botones3">¡COMIENZA AHORA! </button>
+        </div>
+    </div>
+    <div class="linea"></div>
     </section>
+
+
 
     <!--Contacto______________________________________________________________________ -->
     <section>
-        <div class="container2">
-            <div class="intro">
+        <div class="container4">
+            <div class="contact">
                 <h1>CONTACTO</h1><br>
-                <p>¿Tienes alguna teoría interesante sobre Gravity Falls? ¿Encontraste un dato curioso que aún no está en nuestra página? ¡Nos encantaría saberlo! Escríbenos y únete a la comunidad de investigadores del misterio."</p>
+                <p>¿Tienes alguna teoría interesante sobre Gravity Falls? ¿Encontraste un dato curioso que aún no está
+                    en nuestra página? ¡Nos encantaría saberlo! Escríbenos y únete a la comunidad de investigadores del
+                    misterio."</p>
             </div>
-            <div>
+
+            <div id="container5">
                 <div>
-                  <img src="" alt="">
+                    <img src="../Assets/Icons-removebg-preview.png" alt="" width="350px">
                 </div>
                 <div>
-                   <form action="">
+                    <form action="#" method="POST">
+                        <div class="containerr">
+                            <div class="input-container">
+                                <input type="text" name="username" placeholder="Nombre de usuario" required>
+                            </div>
 
+                            <div class="input-container">
+                                <input type="email" name="email" placeholder="Correo electrónico" required>
+                            </div>
 
-                   </form> 
+                            <div class="input-container1">
+                                <input name="password" placeholder="Danos tu opinion " minlength="6" required>
+                                <button id="Botondentro">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Fooder______________________________________________________________________ -->
+    <section>
+        <div class="fooder">
+            <div class="info">
+                <p>Paginota <br> emaiosdsdsf</p>
+            </div>
+
+            <div class="iconos">
+                <div class="icon1"><i class="fa fa-facebook	"></i></div>
+                <div class="icon2"><i class="fa fa-twitter"></i></div>
+                <div class="icon3"><i class="fa fa-youtube-play"></i></div>
+                <div class="icon4"><i class="fa fa-instagram"></i></div>
+
             </div>
 
         </div>
+
+        <div class="linea"></div>
+
     </section>
+
 
 
 </body>
