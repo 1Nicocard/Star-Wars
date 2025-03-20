@@ -112,6 +112,7 @@ h2{
 
 .boto{
     list-style: none;
+    cursor: pointer;
 }
 
 
@@ -134,6 +135,7 @@ h2{
    
     border-radius: 50px;
     border: none;
+    cursor: pointer;
 
 }
 
@@ -184,6 +186,7 @@ h2{
     
     border-radius: 50px;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -209,6 +212,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     
 }
 
@@ -229,7 +233,7 @@ h2{
     
     border-radius: 50px;
     border: none;
-  
+    cursor: pointer;
 }
 
 .R2-D2{
@@ -397,6 +401,7 @@ h2{
 
 .Boto{
     justify-items: center;
+    cursor: pointer;
 }
 
 
@@ -421,7 +426,7 @@ h2{
     
     border-radius: 50px;
     border: none;
-
+    cursor: pointer;
 }
 
 /*Contacto_______________________________________________________________________________________________*/
@@ -507,6 +512,7 @@ h2{
   
    border-radius: 50px;
    border: none;
+   cursor: pointer;
 
 }
 

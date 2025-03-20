@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Fondo */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../Assets/Fondo\ perfil.jpg) no-repeat center center/cover;
+    opacity: 20%;
+    z-index: -1;
+}
+
+/* Título de Configuración de Usuario */
+.settings-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor General */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Caja de contenido */
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+/* Sección Izquierda */
+.left-section {
+    width: 60%;
+    text-align: left;
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Campos de Entrada */
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.input-container i {
+    margin-right: 10px;
+    color: #555;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+/* Botón Guardar */
+.save-button {
+    width: 100%;
+    padding: 10px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Botón Eliminar Cuenta */
+.delete-account {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    color: red;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Sección Derecha (Foto de Perfil) */
+.right-section {
+    width: 40%;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.upload-button {
+    margin-top: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Botón de retroceso */
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.back-button a {
+    font-size: 20px;
+    color: #555;
+    text-decoration: none;
+}
