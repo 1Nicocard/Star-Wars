@@ -1,3 +1,9 @@
+html {
+   scroll-behavior: smooth;
+}
+
+
+
 body{
     background-color: black;
 
@@ -9,9 +15,26 @@ body{
     display: flex;
     flex-direction: column;
 
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif   
 }
+
+/*Color de botones cuando pasa mouse _______________________________________________________________________*/
+
+button {
+  
+   cursor: pointer;
+
+   transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+   background-color: rgb(255, 255, 255); /* Color más brillante */
+   color: black;
+   box-shadow: 0 0 40px rgba(255, 255, 255, 0.8); /* Efecto de brillo */
+   filter: brightness(1.2); /* Aumenta la luminosidad */
+}
+
 
 
 /*lienas_______________________________________________________________________*/
@@ -175,20 +198,25 @@ h2{
     justify-content: center;
 }
 
+.callto{
+   height: 65px;
+   
+}
+
 .botones1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     font-weight: bold;
 
-    width: 300px;
+    width: 280px;
 
     padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 10px;
 
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
     
     border-radius: 50px;
     border: none;
@@ -201,7 +229,6 @@ h2{
 .container3{
     margin: 0%;
     justify-items: center;
-    padding-bottom: 20px;
     text-align: center;
 
     display: flex;
@@ -237,12 +264,12 @@ h2{
     width: 230px;
 
     padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 10px;
 
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
     
     border-radius: 50px;
     border: none;
@@ -267,9 +294,6 @@ h2{
 .mensajito{
    padding: 20px;
 }
-
-
-
 
 
 
@@ -326,18 +350,7 @@ h2{
     height: 100%;
     color: #fff;
  }
- #slides .slide_1 {
-    background-size: cover;
- }
- #slides .slide_2 {
-    background: #003459;
- }
- #slides .slide_3 {
-    background: #007EA7;
- }
- #slides .slide_4 {
-    background: #00A8E8;
- }
+
  #controls {
     color: #ffffff;
     margin: -180px 0 0 0;
@@ -347,8 +360,8 @@ h2{
     position: relative;
  }
  #controls label {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: block; 
     background-size: contain;
     background-position: center;
@@ -362,8 +375,8 @@ h2{
    background: url(../Assets/Botoncarrusel2.png) no-repeat center;
     background-size: contain;
     position: absolute;
-    top: 185px;
-    right: 750px;
+    top: 190px;
+    right: 760px;
    
 }
  #slide1:checked ~ #controls label:nth-last-child(1),
@@ -373,8 +386,8 @@ h2{
    background-image: url(../Assets/Botoncarrusel.png);
    background-size: contain;
    position: absolute;
-   top: 185px;
-   left: 750px;
+   top: 190px;
+   left: 760px;
  }
 
 
@@ -444,8 +457,8 @@ h2{
     padding-bottom: 15px;
     padding-left: 15px;
 
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
     
     border-radius: 50px;
     border: none;
@@ -505,6 +518,9 @@ h2{
    padding: 10px;
    padding-bottom: 100px;
    border-radius: 5px;
+
+   overflow: scroll;
+
 }
 
 
@@ -523,15 +539,15 @@ h2{
    font-size: 19px;
 
    margin-right: 10px;
-   width: 100px;
+   width: 110px;
    
    padding-right: 20px;
    padding-top: 9px;
    padding-left: 20px;
    padding-bottom: 8px;
 
-   background-color: rgb(255, 255, 255);
-   color: rgb(0, 0, 0);
+   background-color: rgb(37, 37, 37);
+   color: rgb(255, 255, 255);
   
    border-radius: 50px;
    border: none;
@@ -548,15 +564,15 @@ h2{
 }
 
 .info{
-   padding-top: 100px;
-   padding-bottom: 25px;
+
+   padding-bottom: 5px;
    text-align: center;
 }
 
 
 .iconos{
    display: flex;
-   gap: 20px;
+   gap: 2px;
 }
 
 .icon1{
@@ -566,19 +582,19 @@ h2{
    padding-top: 14px;
    padding-left: 21px;
    padding-right: 21px;
-   background-color: rgb(255, 255, 255);
+   background-color: rgb(0, 0, 0);
    border-radius: 100px;
-   color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
 }
 .icon2{
    font-size: 25px;
-   padding-bottom: 1px;
+   padding-bottom: 17px;
    padding-top: 15px;
    padding-left: 18px;
    padding-right: 18px;
-   background-color: rgb(255, 255, 255);
+   background-color: rgb(0, 0, 0);
    border-radius: 100px;
-   color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
 }
 .icon3{
    font-size: 25px;
@@ -586,9 +602,9 @@ h2{
    padding-top: 14px;
    padding-left: 18px;
    padding-right: 18px;
-   background-color: rgb(255, 255, 255);
+   background-color: rgb(0, 0, 0);
    border-radius: 100px;
-   color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
 }
 
 .icon4{
@@ -597,9 +613,18 @@ h2{
    padding-top: 14px;
    padding-left: 18px;
    padding-right: 18px;
-   background-color: rgb(255, 255, 255);
+   background-color: rgb(0, 0, 0);
    border-radius: 100px;
-   color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
+}
+
+
+#mensaj{
+   margin-top: 50px;
+   font-size: 15px;
+   text-align: center;
+   background-color: rgb(37, 37, 37);
+   padding: 7px;
 }
 
 
