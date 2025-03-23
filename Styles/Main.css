@@ -3,10 +3,14 @@ body{
 
     background-size: cover;
     position: absolute;
+
+
     
+    display: flex;
+    flex-direction: column;
 
     color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif   
 }
 
 
@@ -22,7 +26,7 @@ body{
 
    .linea2{
     border-bottom: 1px solid white;     
-    width: 600px;
+    width: 530px;
       }
    
 
@@ -56,26 +60,29 @@ h2{
 }
 
 .logo {
-    padding-top: 20px;
-    width: 10rem;
+    padding-top: px;
+    width: 11rem;
     object-fit: cover;
     padding-right: 50px;
 }
 
 .menu {
-    padding-top: 0%;
-    margin-top: 0%;
+    padding-top: 20px;
+   
 
-    width: 300px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 100%);
+
+    z-index: 1000; /* Para barra encima de carrusel */
 
     justify-content: center;
     position: fixed;
     top: 0%;
     display: flex;
-    width: 100%;
+    width: 101%;
     height: 120px;
-    align-items: center;
+    
+    align-items: flex-start;
 }
 
 .container {
@@ -89,13 +96,13 @@ h2{
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 42px;
     border-bottom: 1px solid white;
 }
 
 .nav-items li {
     padding-bottom: 5px;
-    padding-right: 20px;
+    padding-right: 30px;
     list-style: none;
 }
 
@@ -122,18 +129,18 @@ h2{
     font-size: 19px;
 
     margin-left: 30px;
-    width: 200px;
+    width: 160px;
     margin-bottom: 10px;
 
     padding-right: 20px;
-    padding-top: 9px;
+    padding-top: 10px;
     padding-left: 20px;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
    
-    border-radius: 50px;
+    border-radius: 100px;
     border: none;
     cursor: pointer;
 
@@ -161,12 +168,11 @@ h2{
 
 
 .call{
+
+   width: auto;
+   height: auto;
     display: flex;
-
-    height: 60px;
-
-    padding-right: 200px;
-    padding-left: 200px ;
+    justify-content: center;
 }
 
 .botones1{
@@ -212,8 +218,15 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    
+    cursor: pointer; 
+}
+
+#bot1{
+   margin-right: -60px;
+}
+
+#bot2{
+   margin-left: -60px;
 }
 
 .botones2{
@@ -237,8 +250,8 @@ h2{
 }
 
 .R2-D2{
-    padding-left: 75px;
-    padding-right: 25px;
+    padding-left: 60px;
+    padding-right: 45px;
 }
 
 
@@ -256,12 +269,16 @@ h2{
 }
 
 
+
+
+
+
 #slider {
     margin: 0 auto;
     width: 95%;
     max-width: 100%;
     text-align: center;
-    height: 900px;
+    height: 930px;
  }
  #slider input[type=radio] {
     display: none;
@@ -330,33 +347,37 @@ h2{
     position: relative;
  }
  #controls label {
-    transition: opacity 0.2s ease-out;
-    display: none;
     width: 50px;
     height: 50px;
-    opacity: .4;
+    display: block; 
+    background-size: contain;
+    background-position: center;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+
+   background: url(../Assets/Botoncarrusel2.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 185px;
+    right: 750px;
+   
+}
+ #slide1:checked ~ #controls label:nth-last-child(1),
+ #slide2:checked ~ #controls label:nth-last-child(4),
+ #slide3:checked ~ #controls label:nth-last-child(3),
+ #slide4:checked ~ #controls label:nth-last-child(2) {
+   background-image: url(../Assets/Botoncarrusel.png);
+   background-size: contain;
+   position: absolute;
+   top: 185px;
+   left: 750px;
  }
- #controls label:hover {
-    opacity: 1;
- }
- #slide1:checked ~ #controls label:nth-child(2),
- #slide2:checked ~ #controls label:nth-child(3),
- #slide3:checked ~ #controls label:nth-child(4),
- #slide4:checked ~ #controls label:nth-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
-    float:right;
-    margin: 0 -50px 0 0;
-    display: block;
- }
- #slide1:checked ~ #controls label:nth-last-child(2),
- #slide2:checked ~ #controls label:nth-last-child(3),
- #slide3:checked ~ #controls label:nth-last-child(4),
- #slide4:checked ~ #controls label:nth-last-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
-    float:left;
-    margin: 0 0 0 -50px;
-    display: block;
- }
+
+
  #bullets {
     margin: 150px 0 0;
     text-align: center;
@@ -400,9 +421,11 @@ h2{
 /*Boton_____________________________________________________________________________________________________*/
 
 .Boto{
+   
     justify-items: center;
     cursor: pointer;
 }
+
 
 
 .botones3{
@@ -410,10 +433,10 @@ h2{
     font-weight: bold;
     font-size: 45px;
 
-    width: 600px;
+    width: 500px;
 
-    margin-bottom: 80px;
-    margin-left: 40px;
+    margin-bottom: 50px;
+
 
 
     padding-right: 15px;
