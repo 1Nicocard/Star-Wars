@@ -179,7 +179,7 @@ h2{
     flex-direction: column;
 
 
-    padding-top: 80px;
+    padding-top: 50px;
     padding-right: 200px;
     padding-left: 200px;
 
@@ -468,7 +468,7 @@ h2{
 /*Contacto_______________________________________________________________________________________________*/
 
 .container4{
-   padding-top: 80px;
+   padding-top: 50px;
    padding-right: 500px;
    padding-left: 500px;
    text-align: center;
@@ -476,7 +476,7 @@ h2{
 }
 
 #container5{
-   padding-top: 50px;
+   padding-top: 10px;
    display: flex;
    align-items: center;
 }
