@@ -11,6 +11,7 @@ body {
     position: relative;
 }
 
+ /*Fondo_______________________________________________________________________*/
 
 .background {
     position: fixed;
@@ -23,7 +24,7 @@ body {
     z-index: -1;
 }
 
-
+ /*Flecha_______________________________________________________________________*/
 .back-arrow {
     position: absolute;
     top: 20px;
@@ -33,6 +34,7 @@ body {
     text-decoration: none;
 }
 
+ /*¿Estas listo?_______________________________________________________________________*/
 
 .title {
     font-size: 46px;
@@ -46,12 +48,14 @@ body {
     text-align: center;
 }
 
+ /*Iconos_______________________________________________________________________*/
 
 .icon-left, .icon-right {
     width: 60px; 
     height: auto;
 }
 
+ /*Formulario_______________________________________________________________________*/
 
 .container {
     background-color: white;
@@ -87,6 +91,7 @@ body {
     color: black;
 }
 
+/*Botón _______________________________________________________________________*/
 
 .login-button {
     background-color: white;
@@ -96,12 +101,26 @@ body {
     font-size: 18px;
     font-weight: bold;
     border-radius: 15px;
-    cursor: pointer;
     margin-top: 15px;
     width: 360px; 
     text-align: center;
 }
 
+button {
+  
+    cursor: pointer;
+ 
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ button:hover {
+    background-color: rgb(255, 255, 255); /* Color más brillante */
+    color: black;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8); /* Efecto de brillo */
+    filter: brightness(1.2); /* Aumenta la luminosidad */
+ }
+
+ /*linea de división_______________________________________________________________________*/
 
 .divider {
     width: 360px; 
@@ -111,6 +130,7 @@ body {
     margin: 15px 0;
 }
 
+ /*Texto de registro_______________________________________________________________________*/
 
 .register-text a {
     display: block;
