@@ -3,56 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thor Odinson - Marvel</title>
+    <title>Yoda - Star Wars</title>
     <link rel="stylesheet" href="../Styles/Element.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
-<!--Fondo_______________________________________________________________________________________________________ -->
+<!-- Flecha de regreso -->
+<a href="../Pages/Catalogo.html" class="back-arrow">
+    <i class="fa-solid fa-arrow-left"></i>
+</a>
 
-    <div class="background"></div>
+<!-- Fondo -->
+<div class="background"></div>
 
-    <div class="container">
-        <div class="content">
-            <header>
-                <img src="../Assets/logo-02.png" alt="Logo" class="header-logo">
-            </header>
+<!-- Contenedor principal -->
+<div class="container">
+    <header>
+        <img src="../Assets/logo-02.png" alt="Logo" class="header-logo">
+    </header>
 
-        <div class="content">
-            <div class="image-container">
-                <img src="../Assets/yoda.png" alt="" class="character-image">
+    <div class="content">
+        <!-- Imagen del personaje -->
+        <div class="image-container">
+            <img src="../Assets/yoda.png" alt="Yoda" class="character-image">
+        </div>
+
+        <!-- Información del personaje -->
+        <div class="info">
+            <h1 class="team">Acerca de</h1>
+            <h2 class="name">Yoda</h2>
+
+            <div class="background">
+                <h3>Información</h3>
+                <div class="Info">
+                <p><strong>Nombre: </strong>Yoda</p>
+                <p><strong>Altura: </strong>66 cm</p>
+                <p><strong>Masa: </strong>17 kg</p>
+                <p><strong>Color de cabello: </strong>Blanco</p>
+                <p><strong>Color de piel: </strong>Verde</p>
+                <p><strong>Color de ojos: </strong>Marrón</p>
+                <p><strong>Año de nacimiento: </strong>896 BBY</p>
+                <p><strong>Género: </strong>Masculino</p>
+                <p><strong>Mundo natal: </strong>Desconocido</p>
             </div>
-            <div class="info">
-                <h2 class="team">Acerca de</h2>
-                <h1 class="name">Yoda<br></h1>
-                
-                <div class="background">
-                    <p><strong>Nombre: </strong>Yoda</p>
-                    <p><strong>Altura: </strong>66</p>
-                    <p><strong>Masa: </strong>17</p>
-                    <p><strong>Color de cabello: </strong>Blanco</p>
-                    <p><strong>Color de piel: </strong>Verde</p>
-                    <p><strong>Color de ojos: </strong>Marrón</p>
-                    <p><strong>Año de nacimiento: </strong>896BBY</p>
-                    <p><strong>Genero: </strong>Masculino</p>
-                    <p><strong>Mundo natal: </strong>Desconocido</p>
-                </div>
+            </div>
 
-                <div class="appearances">
-                    <h3>Peliculas</h3>
-                    <div class="movies">
-                        <img src="../Assets/2.jpeg" alt="">
-                        <img src="../Assets/3.jpeg" alt="">
-                        <img src="../Assets/4.jpeg" alt="">
-                        <img src="../Assets/5.jpeg" alt="">
-                        <img src="../Assets/6.jpeg" alt="">
-                    </div>
+            <!-- Apariciones en películas -->
+            <div class="appearances">
+                <h3>Películas</h3>
+                <div class="movies">
+                    <img src="../Assets/2.jpeg" alt="Película 1">
+                    <img src="../Assets/3.jpeg" alt="Película 2">
+                    <img src="../Assets/4.jpeg" alt="Película 3">
+                    <img src="../Assets/5.jpeg" alt="Película 4">
+                    <img src="../Assets/6.jpeg" alt="Película 5">
                 </div>
             </div>
         </div>
     </div>
-
-
 </div>
+
+<!-- Footer -->
+<section>
+    <div class="footer">
+        <img src="../Assets/logo-02.png" alt="Logo">
+
+        <div class="iconos">
+            <a href="https://www.facebook.com/StarWars/?locale=es_LA" target="_blank">
+                <div class="icon"><i class="fa fa-facebook"></i></div>
+            </a>
+            <a href="https://twitter.com/StarWarsLA" target="_blank">
+                <div class="icon"><i class="fa fa-twitter"></i></div>
+            </a>
+            <a href="https://www.youtube.com/user/starwars" target="_blank">
+                <div class="icon"><i class="fa fa-youtube-play"></i></div>
+            </a>
+            <a href="https://www.instagram.com/starwars/?hl=es" target="_blank">
+                <div class="icon"><i class="fa fa-instagram"></i></div>
+            </a>
+        </div>
+    </div>
+
+    <div id="mensaje"><p>TM & © Lucasfilm Ltd. All Rights Reserved</p></div>
+</section>
+
 </body>
 </html>
