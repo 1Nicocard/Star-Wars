@@ -43,7 +43,7 @@ body {
  /*¿Estas listo?_______________________________________________________________________*/
 
 .title {
-    font-size: 46px;
+    font-size: 48px;
     font-weight: bold;
     color: white;
     display: flex;
@@ -93,21 +93,27 @@ body {
     background: none;
     outline: none;
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 19px;
     color: black;
 }
 
 /*Botón _______________________________________________________________________*/
 
 .login-button {
-    background-color: white;
-    color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
     border: none;
-    padding: 10px 20px;
-    font-size: 18px;
+
+    padding-right: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+
+    font-size: 22px;
     font-weight: bold;
-    border-radius: 15px;
-    margin-top: 15px;
+    border-radius: 50px;
+    margin-top: 17px;
     width: 360px; 
     text-align: center;
 }
@@ -120,9 +126,9 @@ button {
  }
  
  button:hover {
-    background-color: rgb(255, 255, 255); /* Color más brillante */
-    color: black;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8); /* Efecto de brillo */
+    background-color: rgb(26, 69, 171);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 40px rgb(26, 69, 171); /* Efecto de brillo */
     filter: brightness(1.2); /* Aumenta la luminosidad */
  }
 
@@ -143,84 +149,13 @@ button {
     text-align: center;
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .register-text a:hover {
     text-decoration: underline;
 }
 
-/*Footer_____________________________________________________________________________________________________________________*/
-
-.fooder{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
- 
- .info{
- 
-    padding-bottom: 5px;
-    text-align: center;
- }
- 
- 
- .iconos{
-    display: flex;
-    gap: 2px;
- }
- 
- .icon1{
-    
-    font-size: 29px;
-    padding-bottom: 14px;
-    padding-top: 14px;
-    padding-left: 21px;
-    padding-right: 21px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
- }
- .icon2{
-    font-size: 25px;
-    padding-bottom: 17px;
-    padding-top: 15px;
-    padding-left: 18px;
-    padding-right: 18px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
- }
- .icon3{
-    font-size: 25px;
-    padding-bottom: 14px;
-    padding-top: 14px;
-    padding-left: 18px;
-    padding-right: 18px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
- }
- 
- .icon4{
-    font-size: 29px;
-    padding-bottom: 14px;
-    padding-top: 14px;
-    padding-left: 18px;
-    padding-right: 18px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
- }
- 
- 
- #mensaj{
-    margin-top: 50px;
-    font-size: 15px;
-    text-align: center;
-    background-color: rgb(37, 37, 37);
-    padding: 7px;
- }
 
  
  
