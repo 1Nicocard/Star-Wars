@@ -150,3 +150,77 @@ button {
     text-decoration: underline;
 }
 
+/*Footer_____________________________________________________________________________________________________________________*/
+
+.fooder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ 
+ .info{
+ 
+    padding-bottom: 5px;
+    text-align: center;
+ }
+ 
+ 
+ .iconos{
+    display: flex;
+    gap: 2px;
+ }
+ 
+ .icon1{
+    
+    font-size: 29px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-left: 21px;
+    padding-right: 21px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+ }
+ .icon2{
+    font-size: 25px;
+    padding-bottom: 17px;
+    padding-top: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+ }
+ .icon3{
+    font-size: 25px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+ }
+ 
+ .icon4{
+    font-size: 29px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+ }
+ 
+ 
+ #mensaj{
+    margin-top: 50px;
+    font-size: 15px;
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    padding: 7px;
+ }
+
+ 
+ 
