@@ -1,3 +1,12 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
 html {
     scroll-behavior: smooth;
  }
@@ -217,12 +226,13 @@ input {
 
 /*Filas de containers_________________________________________________________________________________________*/
 
-.container-1{
+.container-1 {
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 100px;
+    white-space: nowrap; 
+    width: 100%; 
+    position: relative;
+}
 
-    }
 
 /*Elemento________________________________________________________________________________________________-______*/
 
@@ -309,14 +319,22 @@ button {
 /* Contenedor de elementos en el carrusel______________________________________________________________________________ */
 
 .carrusel {
+    margin-right: 800px;
+    margin-left: 400px;
+    margin-top: 100px;
+    height: 800px;
     display: flex;
     gap: 20px;
+
 }
+
+
 
 /* Elementos individuales______________________________________________________________________________________________ */
 .element {
-    flex: 0 0 calc(25% - 20px); 
+    flex: 0 0 calc(25% - 24.5px); 
     scroll-snap-align: start; 
+    
 }
 
 /* Ocultar la barra de desplazamiento en algunos navegadores______________________________________________________________ */
@@ -326,6 +344,7 @@ button {
 
 /* Flechas de navegación__________________________________________________________________________________________________ */
 .nav-container {
+    
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -335,16 +354,28 @@ button {
 }
 
 .nav-button {
+
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
     cursor: pointer;
     font-size: 40px;
-    padding: 10px;
+    padding: 25px;
     text-decoration: none;
     z-index: 10;
 }
 
+
+.nav-button.left {
+    
+    position: absolute;
+    left: 10px;
+}
+
+.nav-button.right {
+    position: absolute;
+    right: 10px;
+}
 
 
 /*Footer_____________________________________________________________________________________________________________________*/
