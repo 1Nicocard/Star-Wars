@@ -23,22 +23,56 @@ body {
 }
 
 /*Flecha_____________________________________________________________________________________________________________________*/
+
 .back-arrow {
+
+    cursor: pointer;
     position: absolute;
     top: 20px;
     left: 20px;
     font-size: 24px;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
+   
 }
 
+/* Header______________________________________________________________________________________________________________ */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-logo {
+    width: 240px;
+    height: auto;
+}
 /*Contenedor_____________________________________________________________________________________________________________________*/
 .container {
-    width: 750px; /* Aumenté el tamaño del contenedor */
+    margin-top: 70px;
+    width: 750px; 
     background: white;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.name-container {
+    display: flex;
+    gap: 10px; 
+}
+
+
+
+.icon-right {
+    width: 60px; 
+    height: auto;
+    vertical-align: middle;
 }
 
 /*Titulo contenedor_____________________________________________________________________________________________________________________*/
@@ -129,11 +163,21 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
+    gap: 10px; 
 }
 
 .edit-button {
     padding: 10px 15px;
     background: #020469;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cerrar-button {
+    padding: 10px 15px;
+    background: #680606;
     color: white;
     border: none;
     border-radius: 5px;
@@ -182,6 +226,7 @@ body {
 .upload-button:hover {
     background: #020469;
 }
+
 
 
  
