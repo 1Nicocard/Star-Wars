@@ -310,7 +310,7 @@ button {
     scroll-snap-type: x mandatory; 
     scroll-behavior: smooth; 
     width: 100%;
-    max-width: 1800px;
+    max-width: 82%;
     margin: auto;
     gap: 20px; 
     padding: 10px;
@@ -323,9 +323,8 @@ button {
     padding-left: 800px;
     padding-right: 1000px;
     margin-top: 100px;
-    height: 800px;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 
 }
 
