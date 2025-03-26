@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;   
 }
 
 /*Fondo_____________________________________________________________________________________________________________________*/
@@ -25,7 +25,7 @@ body {
 /*Flecha_____________________________________________________________________________________________________________________*/
 
 .back-arrow {
-
+    z-index: 9999;
     cursor: pointer;
     position: absolute;
     top: 20px;
@@ -77,10 +77,11 @@ header {
 
 /*Titulo contenedor_____________________________________________________________________________________________________________________*/
 .settings-title {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #000000;
     margin-bottom: 5px;
+   
 }
 
 .subtitle {
@@ -103,7 +104,7 @@ header {
 }
 
 .left-section label {
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
     font-weight: bold;
     display: block;
@@ -143,7 +144,7 @@ header {
 
 /*Informaciín actualizar perfil_____________________________________________________________________________________________________________________*/
 .info-section {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 12px;
     color: #000000;
 }
@@ -152,6 +153,7 @@ header {
     color: #020469;
     font-weight: bold;
     text-decoration: none;
+    font-size: 15px;
 }
 
 .info-section p {
@@ -164,24 +166,43 @@ header {
     justify-content: flex-end;
     margin-top: 20px;
     gap: 10px; 
+    
 }
 
 .edit-button {
     padding: 10px 15px;
-    background: #020469;
-    color: white;
+    background-color: rgb(26, 69, 171);
+    color: rgb(255, 255, 255);
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
 }
+
+button {
+  
+    cursor: pointer;
+ 
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ button:hover {
+    background-color: rgb(26, 69, 171);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 40px rgb(26, 69, 171); /* Efecto de brillo */
+    filter: brightness(1.2); /* Aumenta la luminosidad */
+ }
 
 .cerrar-button {
     padding: 10px 15px;
     background: #680606;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 /*Sección de foto_____________________________________________________________________________________________________________________*/
@@ -195,8 +216,8 @@ header {
 }
 
 .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: #ddd;
     display: flex;
@@ -213,19 +234,18 @@ header {
 
 .upload-button {
     margin-bottom: 200px;
-    margin-top: 10px;
-    background: #020469; 
+    margin-top: 15px;
+    background: rgb(26, 69, 171); 
     color: white;
     border: none;
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
-.upload-button:hover {
-    background: #020469;
-}
+
 
 
 
