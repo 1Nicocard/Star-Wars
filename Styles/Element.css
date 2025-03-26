@@ -1,8 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;   
     background-color: #000000;
+
 }
 
 /* Contenedor principal______________________________________________________________________________________________ */
@@ -49,7 +50,7 @@ header {
 }
 
 .header-logo {
-    width: 150px;
+    width: 300px;
     height: auto;
 }
 
@@ -62,6 +63,7 @@ header {
 
 /* Imagen del personaje____________________________________________________________________________________________ */
 .image-container {
+    margin-top:80px ;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -69,14 +71,20 @@ header {
 
 .character-image {
     width: 80%;
-    max-width: 400px;
+    max-width: 600px;
 }
 
 /* Información del personaje_________________________________________________________________________________________ */
 .info {
     flex: 1;
-    padding: 30px;
+    padding: 10px;
     color: aliceblue;
+    font-size: 19px;
+}
+
+.h3 {
+    
+    font-size: 22px;
 }
 
 /* Nombre del personaje grande______________________________________________________________________________________ */
@@ -84,16 +92,31 @@ header {
     font-size: 70px;
     font-weight: bold;
     color: white;
-    text-transform: uppercase;
-    border-bottom: 2px solid #5855ff;
-    padding-bottom: 25px;
+    border-bottom: 2px solid rgb(26, 69, 171);
+    padding-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.name-container {
+    display: flex;
+    gap: 10px; 
+}
+
+
+
+.icon-right {
+    width: 60px; 
+    height: auto;
+    vertical-align: middle;
 }
 
 /* Líneas separadoras_______________________________________________________________________________________________ */
 .linea-section {
-    border-top: 2px solid #5855ff;
-    margin-top: 25px;
+    border-top: 2px solid rgb(26, 69, 171);
+    margin-top: 20px;
     padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Estilo de la información en dos columnas________________________________________________________________________ */
@@ -130,50 +153,88 @@ header {
     border-radius: 5px;
 }
 
-/* Footer________________________________________________________________________________________________________________ */
-.footer {
+
+/*Footer_____________________________________________________________________________________________________________________*/
+
+.fooder{
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-}
-
-.footer img {
-    width: 300px;
-}
-
-.iconos {
+ }
+ 
+ .infor{
+ 
+    padding-bottom: 5px;
+    text-align: center;
+ }
+ 
+ 
+ .iconos{
     display: flex;
     gap: 30px;
-    margin-top: 10px;
-}
-
-.iconos a {
-    color: white;
-    text-decoration: none;
-}
-
-.icon {
-    font-size: 25px;
-    padding: 14px;
+ }
+ 
+ .icon1{
+    
+    font-size: 29px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-left: 21px;
+    padding-right: 21px;
+   
     border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    transition: 0.3s;
-}
+    color: rgb(255, 255, 255);
+ }
+ .icon2{
+    font-size: 25px;
+    padding-bottom: 17px;
+    padding-top: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+   
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+ }
+ .icon3{
+    font-size: 25px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+   
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+ }
+ 
+ .icon4{
+    font-size: 29px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
 
-.icon:hover {
-    background-color: rgb(50, 50, 50);
-}
+    border-radius: 100px;
+    color: rgb(255, 255, 255);  
+ 
+ }
+ 
 
-#mensaje {
-    margin-top: 10px;
-    font-size: 14px;
+    
+
+ #mensaj{
+    margin-top: 0px;
+    font-size: 2px;
     text-align: center;
     background-color: rgb(37, 37, 37);
     padding: 6px;
-    color: white;
-}
+
+    font-size: 19px;
+    font-weight: 200;
+    margin: 0%;
+    color: rgb(236, 236, 236);
+     
+    
+ }
+
+ 
