@@ -128,6 +128,7 @@ header {
     align-items: center;
     width: 100%;
     margin: 5px 0;
+    
 }
 
 .info-grid p span {
@@ -145,7 +146,7 @@ header {
 /* Apariciones en películas___________________________________________________________________________________________ */
 .movies {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     margin-top: 10px;
 }
 

@@ -16,6 +16,8 @@ body{
     font-family: Arial, Helvetica, sans-serif   
 }
 
+
+
 /*Color de botones cuando pasa mouse _______________________________________________________________________*/
 
 button {
@@ -101,7 +103,6 @@ h2{
     display: flex;
     width: 101%;
     height: 120px;
-    
     align-items: flex-start;
 }
 

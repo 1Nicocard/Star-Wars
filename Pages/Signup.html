@@ -35,7 +35,7 @@
 
  <!--Formulario_______________________________________________________________________________________________________ -->
 
-    <form action="#" method="POST">
+    
         <div class="container">
             <div class="input-container">
                 <i class="fa-solid fa-user"></i>
@@ -44,22 +44,22 @@
 
             <div class="input-container">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="email" id="correo" name="email" placeholder="Correo electrónico" minlength="@" required>
             </div>
 
             <div class="input-container">
                 <i class="fa-solid fa-lock"></i>
-                <input name="password" placeholder="Contraseña" minlength="6" required>
+                <input type="password" name="password" placeholder="Contraseña" minlength="6" required>
             </div>
 
             <div class="input-container">
                 <i class="fa-solid fa-lock"></i>
-                <input name="confirm-password" placeholder="Confirmar contraseña" minlength="6" required>
+                <input type="password" name="confirm-password" placeholder="Contraseña" minlength="6" required>
             </div>
         </div>
 
  <!--Boton_______________________________________________________________________________________________________ -->
-<a href="../Pages/Catalogo.html"> <button class="login-button" type="submit">REGISTRARSE  </button></a>
+<a href="../Pages/Login.html"> <button class="login-button" type="submit">REGISTRARSE  </button></a>
        
 
 <!--Linea divisora_______________________________________________________________________________________________________ --> 
