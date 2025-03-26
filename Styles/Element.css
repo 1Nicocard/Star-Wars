@@ -9,8 +9,10 @@ body {
 /* Contenedor principal______________________________________________________________________________________________ */
 .container {
     width: 90%;
+    padding-bottom: 0px;
     margin: auto;
     padding-top: 20px;
+  
 }
 
 /* Fondo con opacidad________________________________________________________________________________________________ */
@@ -50,7 +52,7 @@ header {
 }
 
 .header-logo {
-    width: 300px;
+    width: 240px;
     height: auto;
 }
 
@@ -63,7 +65,7 @@ header {
 
 /* Imagen del personaje____________________________________________________________________________________________ */
 .image-container {
-    margin-top:80px ;
+    margin-top:20px ;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -94,7 +96,7 @@ header {
     color: white;
     border-bottom: 2px solid rgb(26, 69, 171);
     padding-bottom: 20px;
-    margin-top: 80px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -148,7 +150,7 @@ header {
 }
 
 .movies img {
-    width: 80px;
+    width: 100px;
     height: auto;
     border-radius: 5px;
 }
@@ -157,7 +159,7 @@ header {
 /*Footer_____________________________________________________________________________________________________________________*/
 
 .fooder{
-    margin-top: 150px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
