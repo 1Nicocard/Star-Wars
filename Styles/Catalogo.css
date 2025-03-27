@@ -43,6 +43,12 @@ h2{
     margin: 0%;
 }
 
+#h2b{
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 
 /*barra de navegacion___________________________________________________________________________________________________________*/
 
@@ -206,7 +212,8 @@ input {
 
 .container-1{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 115px;
     margin-bottom: 100px;
 
     }
@@ -220,8 +227,8 @@ input {
     border-radius: 50px;
     justify-items: center;
     background-color: rgb(16, 16, 16);
-    width: 430px;
-    height: 670px;
+    width: 405px;
+    height: 600px;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -232,9 +239,6 @@ input {
 }
 
 
-#texto{
-    padding: 10px;
-}
 /*Botones______________________________________________________________________________________________________________________*/
 
 #Boton{

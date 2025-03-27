@@ -44,6 +44,12 @@ h2{
     margin: 0%;
 }
 
+#h2b{
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
  /*Barra de navegacion________________________________________________________________________*/
 
 .header{
@@ -192,7 +198,7 @@ input {
     border-radius: 50px;
 }
 
-/*Grupos de filas__________________________________________________________________________________________________*/
+/*grupos de filas________________________________________________________________________________________________________________*/
 
 .container-mayor{
     display: flex;
@@ -200,25 +206,27 @@ input {
 }
 
 
-/*Filas de containers_________________________________________________________________________________________*/
+/*Filas de containers_____________________________________________________________________________________________________________*/
 
-.container-1 {
+.container-1{
     display: flex;
-    white-space: nowrap; 
-    width: 100%; 
-    position: relative;
-}
+    justify-content: center;
+    gap: 115px;
+    margin-bottom: 100px;
+
+    }
+
+/*Elemento____________________________________________________________________________________________________________________*/
 
 
-/*Elemento________________________________________________________________________________________________-______*/
 
 .element {
     text-align: center;
     border-radius: 50px;
     justify-items: center;
     background-color: rgb(16, 16, 16);
-    width: 430px;
-    height: 670px;
+    width: 390px;
+    height: 600px;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -229,10 +237,7 @@ input {
 }
 
 
-#texto{
-    padding: 10px;
-}
-/*Botones_______________________________________________________________________*/
+/*Botones______________________________________________________________________________________________________________________*/
 
 #Boton{
     font-family: Arial, Helvetica, sans-serif;
@@ -251,7 +256,7 @@ input {
     cursor: pointer;
 }
 
-/*Color de botones cuando pasa mouse _______________________________________________________________________*/
+/*Color de botones cuando pasa mouse __________________________________________________________________________________________*/
 
 button {
     background-color: rgb(255, 255, 255);
@@ -262,17 +267,17 @@ button {
  button:hover {
     background-color: rgb(26, 69, 171);
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 40px rgb(26, 69, 171); /* Efecto de brillo */
-    filter: brightness(1.2); /* Aumenta la luminosidad */
+    box-shadow: 0 0 40px rgb(26, 69, 171); 
+    filter: brightness(1.2); 
  }
  
- /*iconos de estrella _______________________________________________________________________*/
+ /*iconos de estrella _____________________________________________________________________________________________________________*/
 
 
 #boto-estrella{
    display: flex;
    justify-content: center;
-   width: 700px;
+   width: 600px;
    height: 20px;
 }
 
@@ -300,7 +305,7 @@ button {
     padding-right: 1000px;
     margin-top: 100px;
     display: flex;
-    gap: 40px;
+    gap:50px;
     height: 750px;
 }
 
@@ -324,7 +329,8 @@ button {
     justify-content: space-between;
     position: relative;
     width: 100%;
-    max-width: 1800px;
+    height: 700px;
+    max-width: 87%;
     margin: auto;
 }
 
@@ -336,8 +342,11 @@ button {
     cursor: pointer;
     font-size: 40px;
     padding: 25px;
+    margin-top: 350px;
+    height: 50px;
     text-decoration: none;
     z-index: 10;
+    position: relative;
 }
 
 
