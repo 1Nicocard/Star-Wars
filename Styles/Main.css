@@ -1,19 +1,26 @@
 
-
 html {
    scroll-behavior: smooth;
 }
 
 
+*{
+   margin: 0;
+
+}
 
 body{
     background-color: black;
     background-size: cover;
-    position: absolute;
     display: flex;
     flex-direction: column;
     color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif   
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+.content{
+   width: 100vw;
 }
 
 
@@ -36,7 +43,7 @@ button:hover {
 
 
 
-/*lienas_______________________________________________________________________*/
+/*lineas_______________________________________________________________________*/
 
 .linea{
     border-bottom: 1px solid white;
@@ -54,7 +61,7 @@ button:hover {
 
 /*________________________________________________________________________________________*/
 p{
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 200;
     margin: 0%;
     color: rgb(236, 236, 236);
@@ -62,11 +69,11 @@ p{
 
 h1{
     margin: 0%;
-    font-size: 70px;
+    font-size: 40px;
 }
 
 h2{
-    font-size: 40px;
+    font-size: 28px;
     font-weight: bold;
     margin: 0%;
 }
@@ -82,7 +89,6 @@ h2{
 }
 
 .logo {
-    padding-top: px;
     width: 11rem;
     object-fit: cover;
     padding-right: 50px;
@@ -95,13 +101,13 @@ h2{
 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 100%);
 
-    z-index: 1000; /* Para barra encima de carrusel */
+    z-index: 1000; 
 
     justify-content: center;
     position: fixed;
     top: 0%;
     display: flex;
-    width: 101%;
+    width: 100%;
     height: 120px;
     align-items: flex-start;
 }
@@ -113,26 +119,25 @@ h2{
     align-items: center;
 }
 
-
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 42px;
+    gap: 50px;
     border-bottom: 1px solid white;
 }
 
 .nav-items li {
     padding-bottom: 5px;
-    padding-right: 30px;
     list-style: none;
 }
+
 
 
 .nav-items li a {
     color: rgb(255, 255, 255);
     font-weight: 500;
     text-decoration: none;
-    font-size: 19px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
 
@@ -147,7 +152,7 @@ h2{
 #Boton-principal {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    font-size: 19px;
+    font-size: 16px;
 
     margin-left: 30px;
     width: 160px;
@@ -170,7 +175,10 @@ h2{
 /*intro y call to action________________________________________________________*/
 
  
-
+.fondo1 img{
+   width:1000px; 
+   height:900px;
+}
 
 .container2{
     display: flex;
@@ -203,7 +211,7 @@ h2{
 
 .botones1{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 
     width: 280px;
@@ -225,7 +233,7 @@ h2{
 /*Quienes Somos________________________________________________________*/
 
 .container3{
-    margin: 0%;
+    margin: 0 auto;
     justify-items: center;
     text-align: center;
 
@@ -233,6 +241,9 @@ h2{
     align-items: center;
 
 }
+
+
+
 .tittle{
     padding-bottom: 30px;
 }
@@ -256,7 +267,7 @@ h2{
 
 .botones2{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 
     width: 230px;
@@ -275,7 +286,7 @@ h2{
 }
 
 .R2-D2{
-    padding-left: 60px;
+    padding-left: 20px;
     padding-right: 45px;
 }
 
@@ -291,6 +302,7 @@ h2{
 
 .mensajito{
    padding: 20px;
+   margin-top: 60px;
 }
 
 
@@ -300,7 +312,7 @@ h2{
     width: 95%;
     max-width: 100%;
     text-align: center;
-    height: 930px;
+    height: 780px;
  }
  #slider input[type=radio] {
     display: none;
@@ -311,7 +323,7 @@ h2{
  }
  #slides {
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 50px;
     background: #000000;
     position: relative;
     z-index: 1;
@@ -320,6 +332,7 @@ h2{
     border-radius: 100px;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 5px;
  }
  #slide1:checked ~ #slides .inner {
     margin-left: 0;
@@ -337,7 +350,7 @@ h2{
     transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
     line-height: 0;
-    height: 800px;
+    height: 650px;
  }
  #slides .slide {
     width: 25%;
@@ -370,34 +383,35 @@ h2{
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
 
-   background: url(../Assets/Botoncarrusel2.png) no-repeat center;
+   background: url(../Assets/Botoncarrusel.png) no-repeat center;
     background-size: contain;
     position: absolute;
     top: 190px;
-    right: 760px;
+    right: 850px;
    
 }
  #slide1:checked ~ #controls label:nth-last-child(1),
  #slide2:checked ~ #controls label:nth-last-child(4),
  #slide3:checked ~ #controls label:nth-last-child(3),
  #slide4:checked ~ #controls label:nth-last-child(2) {
-   background-image: url(../Assets/Botoncarrusel.png);
+   background-image: url(../Assets/Botoncarrusel2.png);
    background-size: contain;
    position: absolute;
    top: 190px;
-   left: 760px;
+   left: 850px;
  }
 
 
  #bullets {
     margin: 150px 0 0;
+    margin-top: 50;
     text-align: center;
  }
  #bullets label {
     display: inline-block;
     width: 20px;
     height: 20px;
-    border-radius:100%;
+    border-radius:50px;
     background: #494949;
     margin: 0 10px;
  }
@@ -442,7 +456,7 @@ h2{
 .botones3{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 24px;
 
     width: 500px;
 
@@ -466,9 +480,12 @@ h2{
 /*Contacto_______________________________________________________________________________________________*/
 
 .container4{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    padding-top: 50px;
-   padding-right: 500px;
-   padding-left: 500px;
+   padding-left: 20px;
+   padding-right: 20px;
    text-align: center;
    padding-bottom: 90px;
 }
@@ -479,7 +496,11 @@ h2{
    align-items: center;
 }
 
-
+.contact p {
+margin-left: 80px;
+margin-right: 80px;
+margin-top: 10px;
+}
 
 .containerr {
    padding: 20px;
@@ -530,7 +551,7 @@ h2{
 #Botondentro{
    font-family: Arial, Helvetica, sans-serif;
    font-weight: bolder;
-   font-size: 19px;
+   font-size: 14px;
 
    margin-right: 10px;
    width: 110px;
