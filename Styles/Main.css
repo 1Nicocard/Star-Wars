@@ -396,22 +396,22 @@ h2{
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
 
-   background: url(../Assets/Botoncarrusel2.png) no-repeat center;
+   background: url(../Assets/Botoncarrusel.png) no-repeat center;
     background-size: contain;
     position: absolute;
     top: 190px;
-    right: 770px;
+    right: 820px;
    
 }
  #slide1:checked ~ #controls label:nth-last-child(1),
  #slide2:checked ~ #controls label:nth-last-child(4),
  #slide3:checked ~ #controls label:nth-last-child(3),
  #slide4:checked ~ #controls label:nth-last-child(2) {
-   background-image: url(../Assets/Botoncarrusel.png);
+   background-image: url(../Assets/Botoncarrusel2.png);
    background-size: contain;
    position: absolute;
    top: 190px;
-   left: 770px;
+   left: 820px;
  }
 
 
