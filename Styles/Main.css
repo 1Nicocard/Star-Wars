@@ -236,6 +236,7 @@ h2{
 .container3{
     margin: 0 auto;
     justify-items: center;
+    justify-content: center;
     text-align: center;
 
     display: flex;
@@ -287,9 +288,20 @@ h2{
 }
 
 .R2-D2{
+    margin-top: 20px;
     padding-left: 50px;
-    padding-right: 30px;
+    padding-right: 15px;
 }
+
+.yodota{
+   justify-items: center;
+ padding-right: 150px;
+ padding-left: 15px;
+ margin-bottom: 20px;
+
+}
+
+
 
 
 /*Carrusel_____________________________________________________________________________________________________*/
@@ -488,8 +500,6 @@ h2{
    flex-direction: column;
    align-items: center;
    padding-top: 50px;
-   padding-left: 350px;
-   padding-right: 350px;
    text-align: center;
    padding-bottom: 90px;
 }
@@ -500,10 +510,10 @@ h2{
    align-items: center;
 }
 
-.contact p {
-margin-left: 80px;
-margin-right: 80px;
-margin-top: 10px;
+.contact{
+   justify-content: center;
+   text-align: center;
+width: 50%;
 }
 
 .containerr {
