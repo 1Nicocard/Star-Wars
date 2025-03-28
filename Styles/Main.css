@@ -400,7 +400,7 @@ h2{
     background-size: contain;
     position: absolute;
     top: 190px;
-    right: 820px;
+    right: 760px;
    
 }
  #slide1:checked ~ #controls label:nth-last-child(1),
@@ -411,7 +411,7 @@ h2{
    background-size: contain;
    position: absolute;
    top: 190px;
-   left: 820px;
+   left: 760px;
  }
 
 
