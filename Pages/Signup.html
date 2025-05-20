@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,70 +9,83 @@
     <link rel="stylesheet" href="../Styles/Signup.css">
     <link rel="icon" href="../Assets/favicon_io/favicon.ico" type="image/ico">
 </head>
+
 <body>
 
-<!--Fondo_______________________________________________________________________________________________________ -->
+    <!--Fondo_______________________________________________________________________________________________________ -->
 
     <div class="background"></div>
 
-<!--Flecha_______________________________________________________________________________________________________ -->
+    <!--Flecha_______________________________________________________________________________________________________ -->
 
     <a href="Main.html" class="back-arrow">
         <i class="fa-solid fa-arrow-left"></i>
     </a>
 
-<!--¿Estas listo? / Iconos_______________________________________________________________________________________________________ -->
+    <!--¿Estas listo? / Iconos_______________________________________________________________________________________________________ -->
 
-<h1 class="title">
-           
-
-    <img src="../Assets/Icons-removebg-preview.png" class="icon-left">
-
-    ÚNETE A LA FUERZA
-     
-    <img src="../Assets/Icons-removebg-preview.png" class="icon-right">
-</h1>
+    <h1 class="title">
 
 
- <!--Formulario_______________________________________________________________________________________________________ -->
+        <img src="../Assets/Icons-removebg-preview.png" class="icon-left">
 
- <form action="" method="post">
-        <div class="container">
-            <div class="input-container">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" name="username" placeholder="Nombre de usuario" required>
-            </div>
+        ÚNETE A LA FUERZA
 
-            <div class="input-container">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" id="correo" name="email" placeholder="Correo electrónico" minlength="@" required>
-            </div>
+        <img src="../Assets/Icons-removebg-preview.png" class="icon-right">
+    </h1>
 
-            <div class="input-container">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="password" placeholder="Contraseña" minlength="6" required>
-            </div>
 
-            <div class="input-container">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="confirm-password" placeholder="Contraseña" minlength="6" required>
-            </div>
+    <!--Formulario_______________________________________________________________________________________________________ -->
+
+    <div class="container">
+        <div class="input-container">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
         </div>
-</form>
- <!--Boton_______________________________________________________________________________________________________ -->
-<a href="../Pages/Login.html"> <button class="login-button" type="submit">REGISTRARSE  </button></a>
-       
 
-<!--Linea divisora_______________________________________________________________________________________________________ --> 
 
-        <hr class="divider">
+        <div class="input-container">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+        </div>
 
- <!--Login_______________________________________________________________________________________________________ -->
 
-        <p class="Login-text">
-            <a href="Login.html">¿Ya tienes una cuenta? Inicia sesión</a>
-        </p>
+        <div class="input-container">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" placeholder="Contraseña" required>
+        </div>
+
+        <div class="input-container">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="confirm-password" placeholder="Confirmar contraseña" required>
+        </div>
+
+     
+    </div>
+
+       <button id="btn-registrar">REGISTRARSE</button>
+        <button id="btn-ir-login" style="display: none;">Ir al Login</button>
+
+    <!--Boton_______________________________________________________________________________________________________ -->
+
+
+    <!--Linea divisora_______________________________________________________________________________________________________ -->
+
+    <hr class="divider">
+
+    <!--Login_______________________________________________________________________________________________________ -->
+
+    <p class="Login-text">
+        <a href="Login.html">¿Ya tienes una cuenta? Inicia sesión</a>
+    </p>
     </form>
 
+
+    <!--Conector js____________________________________________________________________________________________________________________ -->
+
+    <script src="../js/Signup.js"></script>
+
+
 </body>
+
 </html>
