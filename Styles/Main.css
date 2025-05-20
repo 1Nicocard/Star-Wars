@@ -78,6 +78,12 @@ h2{
     margin: 0%;
 }
 
+h4{
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0%;
+}
+
 
 
 
@@ -233,6 +239,40 @@ h2{
 
 /*Quienes Somos________________________________________________________*/
 
+
+#contenedor-integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+
+.integrante {
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 30px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.integrante:hover {
+  transform: translateY(-20px);
+}
+
+/* Imagen del integrante */
+.integrante img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ffffff44;
+}
+
 .container3{
     margin: 0 auto;
     justify-items: center;
@@ -289,7 +329,7 @@ h2{
 
 .R2-D2{
     margin-top: 20px;
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 15px;
 }
 
