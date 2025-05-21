@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../Styles/Login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
@@ -15,61 +16,65 @@
     <link rel="icon" href="../Assets/favicon_io/favicon.ico" type="image/ico">
 
 </head>
+
 <body>
 
-<!--Fondo_______________________________________________________________________________________________________ -->
+    <!--Fondo_______________________________________________________________________________________________________ -->
 
     <div class="background"></div>
 
-<!--Flecha_______________________________________________________________________________________________________ -->
-   
+    <!--Flecha_______________________________________________________________________________________________________ -->
+
     <a href="../Pages/Main.html" class="back-arrow">
         <i class="fa-solid fa-arrow-left"></i>
     </a>
 
-<!--¿Estas listo? / Iconos_______________________________________________________________________________________________________ -->
+    <!--¿Estas listo? / Iconos_______________________________________________________________________________________________________ -->
 
     <h1 class="title">
-           
+
 
         <img src="../Assets/Icons-removebg-preview.png" class="icon-left">
         ¿ESTÁS LISTO?
-         
+
 
         <a href="Error.html"><img src="../Assets/Icons-removebg-preview.png" class="icon-right"></a>
     </h1>
 
- <!--Formulario_______________________________________________________________________________________________________ -->
+    <!--Formulario_______________________________________________________________________________________________________ -->
 
- <form action="" method="post">
-    <div class="container">
-        <div class="input-container">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="username" placeholder="Nombre de usuario" required>
+    <form action="" method="post">
+        <div class="container">
+            <div class="input-container">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" placeholder="Nombre de usuario" required>
+            </div>
+
+            <div class="input-container">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" placeholder="Contraseña" minlength="6" required>
+            </div>
         </div>
-        
-        <div class="input-container">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" name="password" placeholder="Contraseña" minlength="6" required>
-        </div>
-    </div>
-</form>
- <!--Boton_______________________________________________________________________________________________________ -->
+    </form>
+    <!--Boton_______________________________________________________________________________________________________ -->
 
-    <a href="../Pages/Catalogo.html"><button class="login-button">ACCEDER</button></a>
+    <button id="btn-login" class="login-button" type="button">ACCEDER</button>
 
-<!--Linea divisora_______________________________________________________________________________________________________ --> 
+    <!--Linea divisora_______________________________________________________________________________________________________ -->
 
     <hr class="divider">
 
- <!--Registrarse_______________________________________________________________________________________________________ -->
+    <!--Registrarse_______________________________________________________________________________________________________ -->
 
     <p class="register-text">
         <a href="Signup.html">¿No tienes cuenta? Regístrate</a>
     </p>
 
+    <!--Conector js____________________________________________________________________________________________________________________ -->
 
-    
-    
+    <script src="../js/Login.js"></script>
+
+
 </body>
+
 </html>
