@@ -1,4 +1,5 @@
-// Usuarios registrados en memoria
+// Arreglo de 3 usuarios________________________________________________________________________________________________________________
+
 const usuarios = [
   { nombre: "Luke", contraseña: "1234" },
   { nombre: "Leia", contraseña: "4567" },
@@ -7,19 +8,18 @@ const usuarios = [
 
 let usuarioLogueado = null;
 
-// Función para validar login
+
+
+// Funcion validar usuario______________________________________________________________________________________________________________
+
 function iniciarSesion(nombre, contraseña) {
   const usuario = usuarios.find(u => u.nombre === nombre && u.contraseña === contraseña);
-
   if (!usuario) {
-    return { exito: false, mensaje: "❌ Usuario o contraseña incorrectos." };
+    return { exito: false, mensaje: "❌Usuario o contraseña incorrectos." };
   }
-
-  usuarioLogueado = usuario;
-  return { exito: true, mensaje: `✅ Bienvenido, ${usuario.nombre}` };
+  return { exito: true, mensaje: `✅Bienvenido, ${usuario.nombre}`, usuario };
 }
 
-// Escuchar clic en "ACCEDER"
 document.getElementById("btn-login").addEventListener("click", () => {
   const nombre = document.querySelector('input[name="username"]').value;
   const contraseña = document.querySelector('input[name="password"]').value;
@@ -29,7 +29,11 @@ document.getElementById("btn-login").addEventListener("click", () => {
   alert(resultado.mensaje);
 
   if (resultado.exito) {
-    window.location.href = "Catalogo.html";
-  }
+  const u = resultado.usuario;
+  // Guardar usuario en localStorage
+  localStorage.setItem("usuarioLogueado", JSON.stringify(u));
+  // Redirigir al catálogo
+  window.location.href = `Catalogo.html?nombre=${u.nombre}&correo=${u.correo}&contraseña=${u.contraseña}`;
+}
 });
 
