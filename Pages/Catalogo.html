@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../Styles/Catalogo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="../Assets/favicon_io/favicon.ico" type="image/ico">
 
@@ -18,43 +19,39 @@
 
 <body>
 
-
-<!--Barra de navegacion________________________________________________________________________________________________________________ -->
+    <!--Barra de navegacion________________________________________________________________________________________________________________ -->
     <section>
         <header class="header">
             <div class="menu">
                 <div class="container">
-                <img class="logo"
+                    <img class="logo"
                         src="https://www.royalmint.com/globalassets/consumer/_campaigns/2023/star-wars/quiz/t14-518x208-starwars-logo.png"
                         alt="">
-                    
 
                     <div class="navegation">
-
                         <ul class="nav-items">
 
                             <li>
-                                <a href="#ELM">
-                                    PERSONAJES
+                                <a href="#ELM">PERSONAJES</a>
+                            </li>
+
+                            <li>
+                                <a id="link-favoritos">MIS FAVORITOS</a>
+                            </li>
+
+                            <li>
+                                <a id="link-perfil">MI PERFIL</a>
+                            </li>
+
+                            <li>
+                                <a id="link-icono">
+                                    <img id="imagenperfil" src="../Assets/Foto de perfil.jpg" alt="" width="50px">
                                 </a>
                             </li>
-                            <li>
-                                <a href="../Pages/Favoritos.html">
-                                    MIS FAVORITOS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../Pages/Profile.html">
-                                    MI PERFIL
-                                    <div class="boto">
-                            </li>
-                            <li>
-                                <a href="./Profile.html"> <img id="imagenperfil"
-                                            src="../Assets/Foto de perfil.jpg"
-                                            alt="" width="50px"></a>
-                            </li>
+
+                        </ul>
                     </div>
-                    </a>
+
 
 
                     </ul>
@@ -66,7 +63,7 @@
         </header>
     </section>
 
-<!--Foto_____________________________________________________________________________________________________________________________ -->
+    <!--Foto_____________________________________________________________________________________________________________________________ -->
 
     <section id="I">
         <div id="fondo1"></div>
@@ -76,7 +73,7 @@
         <div id="catalogo-container"></div>
 
 
-<!--Intro____________________________________________________________________________________________________________________________ -->
+        <!--Intro____________________________________________________________________________________________________________________________ -->
 
         <section id="ELM">
             <div class="mensajecarrusel">
@@ -99,22 +96,23 @@
             </div>
 
 
-<!--Buscador___________________________________________________________________________________________________________________ -->
+            <!--Buscador___________________________________________________________________________________________________________________ -->
 
             <div class="grupo">
-                <input type="text" placeholder="Busca tu personaje..."> <button id="botonbuscador"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Busca tu personaje..."> <button id="botonbuscador"><i
+                        class="fa fa-search"></i></button>
             </div>
 
         </section>
 
- <!--Elemento________________________________________________________________________________________________________________ -->
+        <!--Elemento________________________________________________________________________________________________________________ -->
 
-       <section>
-  <div id="container-mayor"></div>
-</section>
+        <section>
+            <div id="container-mayor"></div>
+        </section>
 
 
-<!--Fooder_______________________________________________________________________________________________________________________ -->
+        <!--Fooder_______________________________________________________________________________________________________________________ -->
 
         <section>
             <div class="fooder">
@@ -155,10 +153,11 @@
 
         </section>
 
-   <!--Conector js____________________________________________________________________________________________________________________ -->
+        <!--Conector js____________________________________________________________________________________________________________________ -->
 
-      <script src="../js/catalogo.js"></script>
-
+        <script src="../js/Sesion.js"></script>
+        <script src="../js/DatosPersonajes.js"></script>
+        <script src="../js/catalogo.js"></script>
 </body>
 
 </html>

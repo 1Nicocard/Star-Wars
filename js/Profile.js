@@ -1,18 +1,23 @@
-// Obtener el usuario logueado desde localStorage
-const usuario = JSON.parse(localStorage.getItem("usuarioLogueado"));
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Obtener el nombre desde la URL
+  const params = new URLSearchParams(window.location.search);
+  const nombre = params.get("nombre");
 
-// Verificamos si hay un usuario logueado
-if (usuario) {
-  // Insertamos los datos en los elementos del perfil
-  document.getElementById("username").textContent = usuario.nombre;
-  document.getElementById("password").textContent = "**********"; // no mostramos la contraseña real
-  document.getElementById("email").textContent = usuario.correo;
-} else {
-  // Si no hay usuario, redirigimos al login
-  alert("Debes iniciar sesión para ver tu perfil.");
-  window.location.href = "Login.html";
-}
+  // 2. Buscar el usuario correspondiente
+  const usuario = usuarios.find(u => u.nombre === nombre);
 
-document.querySelector(".cerrar-button").addEventListener("click", () => {
-  localStorage.removeItem("usuarioLogueado");
+  // 3. Mostrar los datos en el perfil
+  if (!usuario) {
+    document.getElementById("perfil-container").innerHTML = "<p>Usuario no encontrado.</p>";
+    return;
+  }
+
+  const contenedor = document.getElementById("perfil-container");
+
+  contenedor.innerHTML = `
+    <h2>Mi Perfil</h2>
+    <p><strong>Nombre:</strong> ${usuario.nombre}</p>
+    <p><strong>Correo:</strong> ${usuario.correo}</p>
+    <p><strong>Contraseña:</strong> ${usuario.contraseña}</p>
+  `;
 });
