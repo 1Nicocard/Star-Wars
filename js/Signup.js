@@ -37,9 +37,9 @@ document.getElementById("btn-registrar").addEventListener("click", () => {
   const resultado = registrarUsuario(nombre, correo, contraseña, confirmar);
 
 
-// Mostrar mensaje____________________________________________________________________________________________________________________
+  // Mostrar mensaje____________________________________________________________________________________________________________________
 
-  alert(resultado.mensaje); 
+  alert(resultado.mensaje);
 
   const btnIrLogin = document.getElementById("btn-ir-login");
   if (resultado.exito) {

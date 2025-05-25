@@ -75,11 +75,12 @@ document.getElementById("input-buscador").addEventListener("input", () => {
   const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
 
   if (texto === "") {
-    mostrarFavoritos(); // Muestra todos
+    mostrarFavoritos(favoritosData); // ← Aquí se pasa la lista completa
   } else {
     const filtrados = favoritosData.filter(p =>
       p.nombre.toLowerCase().includes(texto)
     );
-    mostrarFavoritos(filtrados); // Muestra solo los que coincidan
+    mostrarFavoritos(filtrados);
   }
 });
+

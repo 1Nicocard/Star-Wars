@@ -48,10 +48,20 @@ function aplicarLinksEstáticosConNombre() {
   const favoritos = document.getElementById("link-favoritos");
   const perfil = document.getElementById("link-perfil");
   const icono = document.getElementById("link-icono");
+  const imagenPerfil = document.getElementById("imagenperfil");
 
   if (favoritos) favoritos.href = `Favoritos.html?nombre=${nombre}`;
   if (perfil) perfil.href = `Profile.html?nombre=${nombre}`;
   if (icono) icono.href = `Profile.html?nombre=${nombre}`;
+
+  // Buscar el usuario correspondiente
+  const usuario = usuarios.find(u => u.nombre === nombre);
+
+  // Cambiar la imagen si el usuario existe y tiene foto
+  if (usuario && usuario.foto && imagenPerfil) {
+    imagenPerfil.src = usuario.foto;
+    imagenPerfil.alt = `Foto de perfil de ${nombre}`;
+  }
 }
 
 // Ejecutar al cargar la página
@@ -66,7 +76,7 @@ document.getElementById("input-buscador").addEventListener("input", () => {
   const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
 
   if (texto === "") {
-    mostrarCatalogo(); 
+    mostrarCatalogo();
   } else {
     const personajesFiltrados = personajes.filter(p =>
       p.nombre.toLowerCase().includes(texto)
@@ -74,3 +84,5 @@ document.getElementById("input-buscador").addEventListener("input", () => {
     mostrarCatalogo(personajesFiltrados);
   }
 });
+
+window.addEventListener("DOMContentLoaded", aplicarLinksEstáticosConNombre);

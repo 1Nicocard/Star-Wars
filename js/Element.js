@@ -20,279 +20,279 @@ const personajes = [
     ]
   },
 
- {
-  id: 2,
-  nombre: "Luke Skywalker",
-  altura: "172 cm",
-  masa: "77 kg",
-  cabello: "Rubio",
-  piel: "Clara",
-  ojos: "Azul",
-  nacimiento: "19 BBY",
-  genero: "Masculino",
-  planeta: "Tatooine",
-  imagen: "../Assets/Luke skywalker.png",
-  peliculas: [
-    "../Assets/4.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg",
-    "../Assets/7.webp",
-    "../Assets/8.webp",
-    "../Assets/9.webp"
-  ]
-},
+  {
+    id: 2,
+    nombre: "Luke Skywalker",
+    altura: "172 cm",
+    masa: "77 kg",
+    cabello: "Rubio",
+    piel: "Clara",
+    ojos: "Azul",
+    nacimiento: "19 BBY",
+    genero: "Masculino",
+    planeta: "Tatooine",
+    imagen: "../Assets/Luke skywalker.png",
+    peliculas: [
+      "../Assets/4.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg",
+      "../Assets/7.webp",
+      "../Assets/8.webp",
+      "../Assets/9.webp"
+    ]
+  },
 
- {
-  id: 3,
-  nombre: "Leia Organa",
-  altura: "150 cm",
-  masa: "49 kg",
-  cabello: "Castaño",
-  piel: "Clara",
-  ojos: "Marrón",
-  nacimiento: "19 BBY",
-  genero: "Femenino",
-  planeta: "Alderaan",
-  imagen: "../Assets/Leia_Organa.webp",
-  peliculas: [
-    "../Assets/4.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg",
-    "../Assets/7.webp",
-    "../Assets/8.webp",
-    "../Assets/9.webp"
-  ]
-},
-{
-  id: 4,
-  nombre: "Chewbacca",
-  altura: "228 cm",
-  masa: "112 kg",
-  cabello: "Marrón",
-  piel: "Desconocido",
-  ojos: "Azul",
-  nacimiento: "200 BBY",
-  genero: "Masculino",
-  planeta: "Kashyyyk",
-  imagen: "../Assets/Chewbacca.webp",
-  peliculas: [
-    "../Assets/3.jpeg",
-    "../Assets/4.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg",
-    "../Assets/7.webp",
-    "../Assets/8.webp",
-    "../Assets/9.webp"
-  ]
-},
-{
-  id: 5,
-  nombre: "R2-D2",
-  altura: "96 cm",
-  masa: "32 kg",
-  cabello: "N/A",
-  piel: "Blanco y azul",
-  ojos: "Rojo",
-  nacimiento: "33 BBY",
-  genero: "Desconocido",
-  planeta: "Naboo",
-  imagen: "../Assets/R2-D2.webp",
-  peliculas: [
-    "../Assets/1.webp",
-    "../Assets/2.jpeg",
-    "../Assets/3.jpeg",
-    "../Assets/4.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg",
-    "../Assets/7.webp"
-  ]
-},
-{
-  id: 6,
-  nombre: "Palpatine",
-  altura: "170 cm",
-  masa: "75 kg",
-  cabello: "Gris",
-  piel: "Pálida",
-  ojos: "Amarillo",
-  nacimiento: "82 BBY",
-  genero: "Masculino",
-  planeta: "Naboo",
-  imagen: "../Assets/Emperor_Palpatine.webp",
-  peliculas: [
-    "../Assets/1.webp",
-    "../Assets/2.jpeg",
-    "../Assets/3.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg",
-    "../Assets/9.webp"
-  ]
-},
-{
-  id: 7,
-  nombre: "Darth Vader",
-  altura: "202 cm",
-  masa: "136 kg",
-  cabello: "Ninguno",
-  piel: "Pálida",
-  ojos: "Amarillo",
-  nacimiento: "41.9 BBY",
-  genero: "Masculino",
-  planeta: "Tatooine",
-  imagen: "../Assets/DarthVader.webp",
-  peliculas: [
-    "../Assets/3.jpeg",
-    "../Assets/4.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg"
-  ]
-},
-{
-  id: 8,
-  nombre: "Darth Maul",
-  altura: "175 cm",
-  masa: "80 kg",
-  cabello: "Ninguno",
-  piel: "Rojo y negro",
-  ojos: "Amarillo",
-  nacimiento: "54 BBY",
-  genero: "Masculino",
-  planeta: "Dathomir",
-  imagen: "../Assets/Darth-Maul.webp",
-  peliculas: [
-    "../Assets/1.webp"
-  ]
-},
-{
-  id: 9,
-  nombre: "BB-8",
-  altura: "67 cm",
-  masa: "18 kg",
-  cabello: "N/A",
-  piel: "Blanco y naranja",
-  ojos: "Negro",
-  nacimiento: "Desconocido",
-  genero: "Desconocido",
-  planeta: "Desconocido",
-  imagen: "../Assets/BB8.webp",
-  peliculas: [
-    "../Assets/7.webp",
-    "../Assets/8.webp",
-    "../Assets/9.webp"
-  ]
-},
-{
-  id: 10,
-  nombre: "Han Solo",
-  altura: "180 cm",
-  masa: "80 kg",
-  cabello: "Castaño",
-  piel: "Clara",
-  ojos: "Marrón",
-  nacimiento: "29 BBY",
-  genero: "Masculino",
-  planeta: "Corellia",
-  imagen: "../Assets/han.webp",
-  peliculas: [
-    "../Assets/4.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg",
-    "../Assets/7.webp"
-  ]
-},
-{
-  id: 11,
-  nombre: "C-3PO",
-  altura: "167 cm",
-  masa: "75 kg",
-  cabello: "N/A",
-  piel: "Dorado",
-  ojos: "Amarillo",
-  nacimiento: "112 BBY",
-  genero: "Masculino",
-  planeta: "Tatooine",
-  imagen: "../Assets/c3po.webp",
-  peliculas: [
-    "../Assets/1.webp",
-    "../Assets/2.jpeg",
-    "../Assets/3.jpeg",
-    "../Assets/4.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg",
-    "../Assets/7.webp",
-    "../Assets/8.webp",
-    "../Assets/9.webp"
-  ]
-},
-{
-  id: 12,
-  nombre: "Obi-Wan Kenobi",
-  altura: "182 cm",
-  masa: "77 kg",
-  cabello: "Castaño",
-  piel: "Clara",
-  ojos: "Azul",
-  nacimiento: "57 BBY",
-  genero: "Masculino",
-  planeta: "Stewjon",
-  imagen: "../Assets/obiwan.webp",
-  peliculas: [
-    "../Assets/1.webp",
-    "../Assets/2.jpeg",
-    "../Assets/3.jpeg",
-    "../Assets/4.jpeg"
-  ]
-},
-{
-  id: 13,
-  nombre: "Boba Fett",
-  altura: "183 cm",
-  masa: "78 kg",
-  cabello: "Negro",
-  piel: "Clara",
-  ojos: "Marrón",
-  nacimiento: "31.5 BBY",
-  genero: "Masculino",
-  planeta: "Kamino",
-  imagen: "../Assets/boba.png",
-  peliculas: [
-    "../Assets/2.jpeg",
-    "../Assets/5.jpeg",
-    "../Assets/6.jpeg"
-  ]
-},
-{
-  id: 14,
-  nombre: "Kylo Ren",
-  altura: "189 cm",
-  masa: "89 kg",
-  cabello: "Negro",
-  piel: "Clara",
-  ojos: "Marrón",
-  nacimiento: "5 ABY",
-  genero: "Masculino",
-  planeta: "Chandrila",
-  imagen: "../Assets/kylo.png",
-  peliculas: [
-    "../Assets/7.webp",
-    "../Assets/8.webp",
-    "../Assets/9.webp"
-  ]
-},
-{
-  id: 15,
-  nombre: "Grogu",
-  altura: "42 cm",
-  masa: "Desconocido",
-  cabello: "Blanco",
-  piel: "Verde",
-  ojos: "Negro",
-  nacimiento: "41 BBY",
-  genero: "Masculino",
-  planeta: "Desconocido",
-  imagen: "../Assets/grogu.webp",
-  peliculas: []
-}
+  {
+    id: 3,
+    nombre: "Leia Organa",
+    altura: "150 cm",
+    masa: "49 kg",
+    cabello: "Castaño",
+    piel: "Clara",
+    ojos: "Marrón",
+    nacimiento: "19 BBY",
+    genero: "Femenino",
+    planeta: "Alderaan",
+    imagen: "../Assets/Leia_Organa.webp",
+    peliculas: [
+      "../Assets/4.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg",
+      "../Assets/7.webp",
+      "../Assets/8.webp",
+      "../Assets/9.webp"
+    ]
+  },
+  {
+    id: 4,
+    nombre: "Chewbacca",
+    altura: "228 cm",
+    masa: "112 kg",
+    cabello: "Marrón",
+    piel: "Desconocido",
+    ojos: "Azul",
+    nacimiento: "200 BBY",
+    genero: "Masculino",
+    planeta: "Kashyyyk",
+    imagen: "../Assets/Chewbacca.webp",
+    peliculas: [
+      "../Assets/3.jpeg",
+      "../Assets/4.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg",
+      "../Assets/7.webp",
+      "../Assets/8.webp",
+      "../Assets/9.webp"
+    ]
+  },
+  {
+    id: 5,
+    nombre: "R2-D2",
+    altura: "96 cm",
+    masa: "32 kg",
+    cabello: "N/A",
+    piel: "Blanco y azul",
+    ojos: "Rojo",
+    nacimiento: "33 BBY",
+    genero: "Desconocido",
+    planeta: "Naboo",
+    imagen: "../Assets/R2-D2.webp",
+    peliculas: [
+      "../Assets/1.webp",
+      "../Assets/2.jpeg",
+      "../Assets/3.jpeg",
+      "../Assets/4.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg",
+      "../Assets/7.webp"
+    ]
+  },
+  {
+    id: 6,
+    nombre: "Palpatine",
+    altura: "170 cm",
+    masa: "75 kg",
+    cabello: "Gris",
+    piel: "Pálida",
+    ojos: "Amarillo",
+    nacimiento: "82 BBY",
+    genero: "Masculino",
+    planeta: "Naboo",
+    imagen: "../Assets/Emperor_Palpatine.webp",
+    peliculas: [
+      "../Assets/1.webp",
+      "../Assets/2.jpeg",
+      "../Assets/3.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg",
+      "../Assets/9.webp"
+    ]
+  },
+  {
+    id: 7,
+    nombre: "Darth Vader",
+    altura: "202 cm",
+    masa: "136 kg",
+    cabello: "Ninguno",
+    piel: "Pálida",
+    ojos: "Amarillo",
+    nacimiento: "41.9 BBY",
+    genero: "Masculino",
+    planeta: "Tatooine",
+    imagen: "../Assets/DarthVader.webp",
+    peliculas: [
+      "../Assets/3.jpeg",
+      "../Assets/4.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg"
+    ]
+  },
+  {
+    id: 8,
+    nombre: "Darth Maul",
+    altura: "175 cm",
+    masa: "80 kg",
+    cabello: "Ninguno",
+    piel: "Rojo y negro",
+    ojos: "Amarillo",
+    nacimiento: "54 BBY",
+    genero: "Masculino",
+    planeta: "Dathomir",
+    imagen: "../Assets/Darth-Maul.webp",
+    peliculas: [
+      "../Assets/1.webp"
+    ]
+  },
+  {
+    id: 9,
+    nombre: "BB-8",
+    altura: "67 cm",
+    masa: "18 kg",
+    cabello: "N/A",
+    piel: "Blanco y naranja",
+    ojos: "Negro",
+    nacimiento: "Desconocido",
+    genero: "Desconocido",
+    planeta: "Desconocido",
+    imagen: "../Assets/BB8.webp",
+    peliculas: [
+      "../Assets/7.webp",
+      "../Assets/8.webp",
+      "../Assets/9.webp"
+    ]
+  },
+  {
+    id: 10,
+    nombre: "Han Solo",
+    altura: "180 cm",
+    masa: "80 kg",
+    cabello: "Castaño",
+    piel: "Clara",
+    ojos: "Marrón",
+    nacimiento: "29 BBY",
+    genero: "Masculino",
+    planeta: "Corellia",
+    imagen: "../Assets/han.webp",
+    peliculas: [
+      "../Assets/4.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg",
+      "../Assets/7.webp"
+    ]
+  },
+  {
+    id: 11,
+    nombre: "C-3PO",
+    altura: "167 cm",
+    masa: "75 kg",
+    cabello: "N/A",
+    piel: "Dorado",
+    ojos: "Amarillo",
+    nacimiento: "112 BBY",
+    genero: "Masculino",
+    planeta: "Tatooine",
+    imagen: "../Assets/c3po.webp",
+    peliculas: [
+      "../Assets/1.webp",
+      "../Assets/2.jpeg",
+      "../Assets/3.jpeg",
+      "../Assets/4.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg",
+      "../Assets/7.webp",
+      "../Assets/8.webp",
+      "../Assets/9.webp"
+    ]
+  },
+  {
+    id: 12,
+    nombre: "Obi-Wan Kenobi",
+    altura: "182 cm",
+    masa: "77 kg",
+    cabello: "Castaño",
+    piel: "Clara",
+    ojos: "Azul",
+    nacimiento: "57 BBY",
+    genero: "Masculino",
+    planeta: "Stewjon",
+    imagen: "../Assets/obiwan.webp",
+    peliculas: [
+      "../Assets/1.webp",
+      "../Assets/2.jpeg",
+      "../Assets/3.jpeg",
+      "../Assets/4.jpeg"
+    ]
+  },
+  {
+    id: 13,
+    nombre: "Boba Fett",
+    altura: "183 cm",
+    masa: "78 kg",
+    cabello: "Negro",
+    piel: "Clara",
+    ojos: "Marrón",
+    nacimiento: "31.5 BBY",
+    genero: "Masculino",
+    planeta: "Kamino",
+    imagen: "../Assets/boba.png",
+    peliculas: [
+      "../Assets/2.jpeg",
+      "../Assets/5.jpeg",
+      "../Assets/6.jpeg"
+    ]
+  },
+  {
+    id: 14,
+    nombre: "Kylo Ren",
+    altura: "189 cm",
+    masa: "89 kg",
+    cabello: "Negro",
+    piel: "Clara",
+    ojos: "Marrón",
+    nacimiento: "5 ABY",
+    genero: "Masculino",
+    planeta: "Chandrila",
+    imagen: "../Assets/kylo.png",
+    peliculas: [
+      "../Assets/7.webp",
+      "../Assets/8.webp",
+      "../Assets/9.webp"
+    ]
+  },
+  {
+    id: 15,
+    nombre: "Grogu",
+    altura: "42 cm",
+    masa: "Desconocido",
+    cabello: "Blanco",
+    piel: "Verde",
+    ojos: "Negro",
+    nacimiento: "41 BBY",
+    genero: "Masculino",
+    planeta: "Desconocido",
+    imagen: "../Assets/grogu.webp",
+    peliculas: []
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

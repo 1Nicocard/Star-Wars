@@ -1,11 +1,12 @@
 // Definicion del integrante___________________________________________________________________________________________________________
 
 class Integrante {
-  constructor(nombre, rol, imagen, info) {
+  constructor(nombre, rol, imagen, info, linkBehance) {
     this.nombre = nombre;
     this.rol = rol;
     this.imagen = imagen;
     this.info = info;
+    this.linkBehance = linkBehance;
 
   }
 
@@ -18,7 +19,7 @@ class Integrante {
         <h4>${this.nombre}</h4>
         <p>${this.rol}</p>
         <p>${this.info}</p>
-        <a href="https://www.behance.net/nicolascardena/${this.nombre.split(' ').join('_')}" target="_blank">
+        <a href="${this.linkBehance}" target="_blank">
           <button class="botones2">VER MAS</button>
         </a>
 
@@ -31,9 +32,10 @@ class Integrante {
 // Arreglo de 2 integrantes________________________________________________________________________________________________________
 
 const equipo = [
-  new Integrante("Hanna Muriel", "Maestra de teorías", "../Assets/hannaa.jpg", "Diseñadora UI", ""),
-  new Integrante("Nicolas Cardenas", "Cazador de easter eggs", "../Assets/nicoo.jpg", "Diseñador UX",),
+  new Integrante("Hanna Muriel", "Maestra de teorías", "../Assets/hannaa.jpg", "Diseñadora UI", "https://www.behance.net/hannamuriel"),
+  new Integrante("Nicolas Cardenas", "Cazador de easter eggs", "../Assets/nicoo.jpg", "Diseñador UX", "https://www.behance.net/nicolascardena8"),
 ];
+
 
 
 const contenedor = document.getElementById("contenedor-integrantes");
