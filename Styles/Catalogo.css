@@ -92,7 +92,7 @@ h2{
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 42px;
+    gap: 70px;
     border-bottom: 1px solid white;
 }
 

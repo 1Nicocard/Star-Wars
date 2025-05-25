@@ -1,14 +1,15 @@
 // Mostrar los personajes en filas de 3
-function mostrarCatalogo() {
+
+function mostrarCatalogo(lista = personajes) {
   const contenedor = document.getElementById("container-mayor");
   contenedor.innerHTML = "";
 
-  for (let i = 0; i < personajes.length; i += 3) {
+  for (let i = 0; i < lista.length; i += 3) {
     const fila = document.createElement("div");
     fila.className = "container-1";
 
-    for (let j = i; j < i + 3 && j < personajes.length; j++) {
-      const p = personajes[j];
+    for (let j = i; j < i + 3 && j < lista.length; j++) {
+      const p = lista[j];
 
       const tarjeta = document.createElement("div");
       tarjeta.className = "element";
@@ -54,4 +55,19 @@ function aplicarLinksEstáticosConNombre() {
 document.addEventListener("DOMContentLoaded", () => {
   mostrarCatalogo();
   aplicarLinksEstáticosConNombre();
+});
+
+// Buscador 
+
+document.getElementById("input-buscador").addEventListener("input", () => {
+  const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
+
+  if (texto === "") {
+    mostrarCatalogo(); 
+  } else {
+    const personajesFiltrados = personajes.filter(p =>
+      p.nombre.toLowerCase().includes(texto)
+    );
+    mostrarCatalogo(personajesFiltrados);
+  }
 });

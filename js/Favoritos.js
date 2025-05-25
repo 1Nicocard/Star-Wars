@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Tomar el nombre desde la URL
+  // Tomar el nombre desde la URL
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
 
-  // 2. Buscar el usuario en la base de datos (Sesion.js)
-  const usuario = usuarios.find(u => u.nombre === nombre);
+  // Establecer enlaces de navegación
+  aplicarLinksEstáticosConNombre();
 
-  // 3. Verificar si el usuario existe y tiene favoritos
+  // Buscar el usuario
+  const usuario = usuarios.find(u => u.nombre === nombre);
   const contenedor = document.getElementById("favoritos-container");
 
   if (!usuario) {
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // 4. Mostrar los personajes favoritos
+  // Mostrar personajes favoritos
   usuario.favoritos.forEach(id => {
     const personaje = personajes.find(p => p.id === id);
 
@@ -28,12 +29,36 @@ document.addEventListener("DOMContentLoaded", () => {
       div.className = "favorito-item";
 
       div.innerHTML = `
-        <img src="${personaje.imagen}" alt="${personaje.nombre}" width="200px">
-        <h3>${personaje.nombre}</h3>
-        <p>${personaje.descripcion}</p>
+      <div><img src="${personaje.imagen}" alt="${personaje.nombre}" width="340px" height="450px"></div>
+      <div id="texto"><h2 id="h2b">${personaje.nombre.toUpperCase()}</h2></div>
+      <div id="boto-estrella">
+        <div><button id="Boton" onclick="verDetalle(${personaje.id})">MÁS DETALLES</button></div>
+      <div id="estrella"><img src="../Assets/estrella.png" alt="favorito" width="55px"></div>
+      </div>
       `;
+
 
       contenedor.appendChild(div);
     }
   });
 });
+
+// Establece los enlaces de navegación con el nombre del usuario desde la URL
+
+function aplicarLinksEstáticosConNombre() {
+  const params = new URLSearchParams(window.location.search);
+  const nombre = params.get("nombre");
+
+  if (!nombre) return;
+
+  const favoritos = document.getElementById("link-favoritos");
+  const perfil = document.getElementById("link-perfil");
+  const icono = document.getElementById("link-icono");
+  const catalogo = document.getElementById("link-catalogo") 
+
+  if (favoritos) favoritos.href = `Favoritos.html?nombre=${nombre}`;
+  if (perfil) perfil.href = `Profile.html?nombre=${nombre}`;
+  if (icono) icono.href = `Profile.html?nombre=${nombre}`;
+  if (catalogo) catalogo.href = `Catalogo.html?nombre=${nombre}`; 
+}
+

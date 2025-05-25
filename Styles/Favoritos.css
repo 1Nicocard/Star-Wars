@@ -50,7 +50,7 @@ h2{
     margin-bottom: 15px;
 }
 
- /*Barra de navegacion________________________________________________________________________*/
+/*barra de navegacion___________________________________________________________________________________________________________*/
 
 .header{
     padding-top: 0%;
@@ -69,7 +69,7 @@ h2{
    
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 100%);
 
-    z-index: 1000; /* Para barra encima de cosas */
+    z-index: 1000; 
 
     justify-content: center;
     position: fixed;
@@ -92,7 +92,7 @@ h2{
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 42px;
+    gap: 70px;
     border-bottom: 1px solid white;
 }
 
@@ -119,11 +119,12 @@ h2{
 }
 
 
+
+
 #imagenperfil{
     border-radius: 1000px;
     margin-left: -90px;
 }
-
 /*Intro __________________________________________________________________________________________________*/
 
 .mensajecarrusel{
