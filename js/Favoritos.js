@@ -1,15 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-// Tomar el nombre desde la URL
-
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
 
-// Establecer enlaces de navegación
-
   aplicarLinksEstáticosConNombre();
-
- // Buscar el usuario
 
   const usuario = usuarios.find(u => u.nombre === nombre);
   const contenedor = document.getElementById("carrusel-dinamico");
@@ -24,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Mostrar personajes favoritos
-
   usuario.favoritos.forEach(id => {
     const personaje = personajes.find(p => p.id === id);
 
@@ -39,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h2 id="h2b">${personaje.nombre.toUpperCase()}</h2>
         </div>
         <div id="boto-estrella">
-          <div><button id="Boton" onclick="verDetalle(${personaje.id})">MÁS DETALLES</button></div>
+          <div><button id="Boton" onclick="verDetalle(${personaje.id}, '${nombre}')">MÁS DETALLES</button></div>
           <div id="estrella"><img src="../Assets/estrella-fav.png" alt="estrella" width="55px"></div>
         </div>
       `;
@@ -48,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Lógica de navegación con botones
   let currentIndex = 0;
   const total = usuario.favoritos.length;
 
@@ -65,12 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
       contenedor.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
   });
+
+  favoritosData = usuario.favoritos.map(id => personajes.find(p => p.id === id)).filter(Boolean);
+  mostrarFavoritos(favoritosData);
 });
 
-  // Guardamos los personajes favoritos en la variable global
-  favoritosData = usuario.favoritos.map(id => personajes.find(p => p.id === id)).filter(Boolean);
-
-  mostrarFavoritos(favoritosData);
+function verDetalle(id, nombre) {
+  window.location.href = `Element.html?id=${id}&nombre=${encodeURIComponent(nombre)}`;
+}
 // Establece los enlaces de navegación con el nombre del usuario desde la URL
 
 function aplicarLinksEstáticosConNombre() {

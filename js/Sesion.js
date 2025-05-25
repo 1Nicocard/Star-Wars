@@ -15,8 +15,21 @@ const usuarios = [
     nombre: "Han",
     contraseña: "7890",
     correo: "han@falcon.com",
-    favoritos: [4, 11, 5] // Chewbacca, C-3PO, R2-D2
-  }
+    favoritos: [4, 11, 5, 6] // Chewbacca, C-3PO, R2-D2, Palpatine
+  },
+  {
+    nombre: "Yoda",
+    contraseña: "1011",
+    correo: "yoda@kiut.com",
+    favoritos: [15] //Grogu
+  },
+
+  {
+    nombre: "Obi",
+    contraseña: "1213",
+    correo: "obi@wan.com",
+    favoritos: [] //No tiene favoritos
+  },
 ];
 
 // Variable que guarda el usuario activo
