@@ -170,7 +170,7 @@ header {
 }
 
 .edit-button {
-    padding: 10px 15px;
+    padding: 15px 20px;
     background-color: rgb(26, 69, 171);
     color: rgb(255, 255, 255);
     border: none;
@@ -195,8 +195,8 @@ button {
  }
 
 .cerrar-button {
-    padding: 10px 15px;
-    background: #680606;
+    padding: 15px 30px;
+    background: #000000;
     color: white;
     border: none;
     border-radius: 50px;

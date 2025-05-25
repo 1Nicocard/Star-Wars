@@ -22,8 +22,6 @@ class Integrante {
         <a href="${this.linkBehance}" target="_blank">
           <button class="botones2">VER MAS</button>
         </a>
-
-
       </div>
     `;
   }
@@ -42,3 +40,26 @@ const contenedor = document.getElementById("contenedor-integrantes");
 
 
 contenedor.innerHTML = equipo.map(integrante => integrante.render()).join("");
+
+
+// parte de contacto________________________________________________________________________________________________________
+
+
+window.onload = function () {
+  var boton = document.getElementById("Botondentro");
+
+  boton.onclick = function (evento) {
+    evento.preventDefault();
+
+    var nombre = document.getElementsByName("username")[0].value;
+    var correo = document.getElementsByName("email")[0].value;
+    var mensaje = document.getElementsByName("password")[0].value;
+
+    if (nombre === "" || correo === "" || mensaje === "") {
+      alert("⚠️ Por favor llena todos los campos.");
+    } else {
+      alert("✨✨✨¡Tu mensaje fue enviado con éxito!✨✨✨");
+      document.forms[0].reset();
+    }
+  };
+};

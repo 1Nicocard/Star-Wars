@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("email").value = usuario.correo;
   document.getElementById("password").value = usuario.contraseña.replace(/./g, "*");
 
-  // Mostrar la imagen del perfil
+  // Mostrar la imagen del perfil ________________________________________________________________________________________
   const profileImage = document.querySelector(".profile-picture img");
   if (usuario.foto && profileImage) {
     profileImage.src = usuario.foto;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const params = new URLSearchParams(window.location.search);
       const nombre = params.get("nombre");
 
-      // Redirigir a PerfilEdicion.html con el nombre como parámetro
+      // Redirigir a PerfilEdicion.html con el nombre como parámetro _____________________________________________________________________________
       if (nombre) {
         window.location.href = `../Pages/Profile edition.html?nombre=${encodeURIComponent(nombre)}`;
       }

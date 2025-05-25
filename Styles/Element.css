@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;   
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #000000;
 
 }
@@ -13,7 +13,7 @@ body {
     margin: auto;
     padding-top: 20px;
     justify-content: center;
-  
+
 }
 
 /* Fondo con opacidad________________________________________________________________________________________________ */
@@ -58,16 +58,24 @@ header {
 }
 
 /* Contenido principal______________________________________________________________________________________________ */
+
+
 .content {
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    justify-items: center;
+    margin-top: 65px;
 }
+
+.container {
+    display: flex;
+    justify-items: center;
+}
+
 
 /* Imagen del personaje____________________________________________________________________________________________ */
 .image-container {
-    margin-top:20px ;
-    flex: 1;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -79,14 +87,14 @@ header {
 
 /* Información del personaje_________________________________________________________________________________________ */
 .info {
-    flex: 1;
+    width: 800px;
     padding: 10px;
     color: aliceblue;
     font-size: 19px;
 }
 
 .h3 {
-    
+
     font-size: 22px;
 }
 
@@ -103,13 +111,13 @@ header {
 
 .name-container {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
 }
 
 
 
 .icon-right {
-    width: 60px; 
+    width: 60px;
     height: auto;
     vertical-align: middle;
 }
@@ -129,7 +137,7 @@ header {
     align-items: center;
     width: 100%;
     margin: 5px 0;
-    
+
 }
 
 .info-grid p span {
@@ -141,7 +149,7 @@ header {
 .info-grid p strong {
     color: white;
     flex: 1;
-    text-align: left; 
+    text-align: left;
 }
 
 /* Apariciones en películas___________________________________________________________________________________________ */
@@ -158,87 +166,3 @@ header {
 }
 
 
-/*Footer_____________________________________________________________________________________________________________________*/
-
-.fooder{
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
- 
- .infor{
- 
-    padding-bottom: 5px;
-    text-align: center;
- }
- 
- 
- .iconos{
-    display: flex;
-    gap: 30px;
- }
- 
- .icon1{
-    
-    font-size: 29px;
-    padding-bottom: 14px;
-    padding-top: 14px;
-    padding-left: 21px;
-    padding-right: 21px;
-   
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
- }
- .icon2{
-    font-size: 25px;
-    padding-bottom: 17px;
-    padding-top: 15px;
-    padding-left: 18px;
-    padding-right: 18px;
-   
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
- }
- .icon3{
-    font-size: 25px;
-    padding-bottom: 14px;
-    padding-top: 14px;
-    padding-left: 18px;
-    padding-right: 18px;
-   
-    border-radius: 100px;
-    color: rgb(255, 255, 255);
- }
- 
- .icon4{
-    font-size: 29px;
-    padding-bottom: 14px;
-    padding-top: 14px;
-    padding-left: 18px;
-    padding-right: 18px;
-
-    border-radius: 100px;
-    color: rgb(255, 255, 255);  
- 
- }
- 
-
-    
-
- #mensaj{
-    margin-top: 0px;
-    font-size: 2px;
-    text-align: center;
-    background-color: rgb(37, 37, 37);
-    padding: 6px;
-
-    font-size: 19px;
-    font-weight: 200;
-    margin: 0%;
-    color: rgb(236, 236, 236);
-     
-    
- }
-
- 

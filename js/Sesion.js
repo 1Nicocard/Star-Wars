@@ -1,3 +1,5 @@
+// Usuarios para iniciar sesion _____________________________________________________________________________________________________________________________
+
 const usuarios = [
   {
     nombre: "Luke",
@@ -37,10 +39,12 @@ const usuarios = [
   },
 ];
 
-// Variable que guarda el usuario activo
+// Variable que guarda el usuario activo ___________________________________________________________________________________________________
+
 let usuarioLogueado = null;
 
-// Iniciar sesión
+// Iniciar sesión _____________________________________________________________________________________________________________________________
+
 function iniciarSesion(nombre, contraseña) {
   const usuario = usuarios.find(u => u.nombre === nombre && u.contraseña === contraseña);
   if (usuario) {
@@ -51,13 +55,14 @@ function iniciarSesion(nombre, contraseña) {
   }
 }
 
-// Cerrar sesión
+// Cerrar sesión _____________________________________________________________________________________________________________________________
+
 function cerrarSesion() {
   usuarioLogueado = null;
   window.location.href = "Login.html";
 }
 
-// Obtener usuario activo
+// Obtener usuario activo _____________________________________________________________________________________________________________________
 function obtenerUsuarioLogueado() {
   return usuarioLogueado;
 }

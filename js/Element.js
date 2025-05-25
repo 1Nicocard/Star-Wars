@@ -1,7 +1,9 @@
+// Detalle del elemento __________________________________________________________________________________________
+
 const personajes = [
   {
     id: 1,
-    nombre: "Yoda",
+    nombre: "YODA",
     altura: "66 cm",
     masa: "17 kg",
     cabello: "Blanco",
@@ -22,7 +24,7 @@ const personajes = [
 
   {
     id: 2,
-    nombre: "Luke Skywalker",
+    nombre: "LUKE SKYWALKER",
     altura: "172 cm",
     masa: "77 kg",
     cabello: "Rubio",
@@ -44,7 +46,7 @@ const personajes = [
 
   {
     id: 3,
-    nombre: "Leia Organa",
+    nombre: "LEIA ORGANA",
     altura: "150 cm",
     masa: "49 kg",
     cabello: "Castaño",
@@ -65,7 +67,7 @@ const personajes = [
   },
   {
     id: 4,
-    nombre: "Chewbacca",
+    nombre: "WHEWBACCA",
     altura: "228 cm",
     masa: "112 kg",
     cabello: "Marrón",
@@ -109,7 +111,7 @@ const personajes = [
   },
   {
     id: 6,
-    nombre: "Palpatine",
+    nombre: "PALPATINE",
     altura: "170 cm",
     masa: "75 kg",
     cabello: "Gris",
@@ -130,7 +132,7 @@ const personajes = [
   },
   {
     id: 7,
-    nombre: "Darth Vader",
+    nombre: "DARTH VADER",
     altura: "202 cm",
     masa: "136 kg",
     cabello: "Ninguno",
@@ -149,7 +151,7 @@ const personajes = [
   },
   {
     id: 8,
-    nombre: "Darth Maul",
+    nombre: "DARTH MAUL",
     altura: "175 cm",
     masa: "80 kg",
     cabello: "Ninguno",
@@ -183,7 +185,7 @@ const personajes = [
   },
   {
     id: 10,
-    nombre: "Han Solo",
+    nombre: "HAN SOLO",
     altura: "180 cm",
     masa: "80 kg",
     cabello: "Castaño",
@@ -226,7 +228,7 @@ const personajes = [
   },
   {
     id: 12,
-    nombre: "Obi-Wan Kenobi",
+    nombre: "OBI-WAN KENOBI",
     altura: "182 cm",
     masa: "77 kg",
     cabello: "Castaño",
@@ -245,7 +247,7 @@ const personajes = [
   },
   {
     id: 13,
-    nombre: "Boba Fett",
+    nombre: "BOBA FETT",
     altura: "183 cm",
     masa: "78 kg",
     cabello: "Negro",
@@ -263,7 +265,7 @@ const personajes = [
   },
   {
     id: 14,
-    nombre: "Kylo Ren",
+    nombre: "KYLO REN",
     altura: "189 cm",
     masa: "89 kg",
     cabello: "Negro",
@@ -281,7 +283,7 @@ const personajes = [
   },
   {
     id: 15,
-    nombre: "Grogu",
+    nombre: "GROGU",
     altura: "42 cm",
     masa: "Desconocido",
     cabello: "Blanco",

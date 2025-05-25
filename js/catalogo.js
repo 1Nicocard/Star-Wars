@@ -31,6 +31,7 @@ function mostrarCatalogo(lista = personajes) {
 }
 
 // Redirige al detalle del personaje _____________________________________________________________________________________________________________
+
 function verDetalle(id) {
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
@@ -38,7 +39,8 @@ function verDetalle(id) {
 }
 
 
-// Establece los enlaces de navegación con el nombre del usuario desde la URL
+// Establece los enlaces de la nav con el nombre del usuario ________________________________________________________________________________________
+
 function aplicarLinksEstáticosConNombre() {
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
@@ -54,23 +56,23 @@ function aplicarLinksEstáticosConNombre() {
   if (perfil) perfil.href = `Profile.html?nombre=${nombre}`;
   if (icono) icono.href = `Profile.html?nombre=${nombre}`;
 
-  // Buscar el usuario correspondiente
+
   const usuario = usuarios.find(u => u.nombre === nombre);
 
-  // Cambiar la imagen si el usuario existe y tiene foto
+  // Cambiar la imagen si el usuario existe y tiene foto _________________________________________________________________________________________________
+
   if (usuario && usuario.foto && imagenPerfil) {
     imagenPerfil.src = usuario.foto;
     imagenPerfil.alt = `Foto de perfil de ${nombre}`;
   }
 }
 
-// Ejecutar al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
   mostrarCatalogo();
   aplicarLinksEstáticosConNombre();
 });
 
-// Buscador 
+// Buscador _________________________________________________________________________________________________________________________________________________
 
 document.getElementById("input-buscador").addEventListener("input", () => {
   const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
