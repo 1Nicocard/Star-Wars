@@ -1,44 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Tomar el nombre desde la URL
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
 
-  // Establecer enlaces de navegación
   aplicarLinksEstáticosConNombre();
 
-  // Buscar el usuario
   const usuario = usuarios.find(u => u.nombre === nombre);
-  const contenedor = document.getElementById("favoritos-container");
+  const contenedor = document.getElementById("carrusel-dinamico");
 
   if (!usuario) {
-    contenedor.textContent = "Usuario no encontrado.";
+    document.getElementById("favoritos-container").textContent = "Usuario no encontrado.";
     return;
   }
 
   if (!usuario.favoritos || usuario.favoritos.length === 0) {
-    contenedor.textContent = "No tienes personajes favoritos aún.";
+    document.getElementById("favoritos-container").textContent = "No tienes personajes favoritos aún.";
     return;
   }
 
-  // Mostrar personajes favoritos
   usuario.favoritos.forEach(id => {
     const personaje = personajes.find(p => p.id === id);
 
     if (personaje) {
-      const div = document.createElement("div");
-      div.className = "favorito-item";
+      const element = document.createElement("div");
+      element.className = "element";
 
-      div.innerHTML = `
-      <div><img src="${personaje.imagen}" alt="${personaje.nombre}" width="340px" height="450px"></div>
-      <div id="texto"><h2 id="h2b">${personaje.nombre.toUpperCase()}</h2></div>
-      <div id="boto-estrella">
-        <div><button id="Boton" onclick="verDetalle(${personaje.id})">MÁS DETALLES</button></div>
-      <div id="estrella"><img src="../Assets/estrella.png" alt="favorito" width="55px"></div>
-      </div>
+      element.innerHTML = `
+        <div><img src="${personaje.imagen}" alt="${personaje.nombre}" width="340px" height="450px"></div>
+        <div id="texto">
+          <h2 id="h2b">${personaje.nombre.toUpperCase()}</h2>
+        </div>
+        <div id="boto-estrella">
+          <div><button id="Boton" onclick="verDetalle(${personaje.id})">MÁS DETALLES</button></div>
+          <div id="estrella"><img src="../Assets/estrella-fav.png" alt="estrella" width="55px"></div>
+        </div>
       `;
 
+      contenedor.appendChild(element);
+    }
+  });
 
-      contenedor.appendChild(div);
+  // Lógica de navegación con botones
+  let currentIndex = 0;
+  const total = usuario.favoritos.length;
+
+  document.getElementById("next").addEventListener("click", () => {
+    if (currentIndex < total - 1) {
+      currentIndex++;
+      contenedor.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  });
+
+  document.getElementById("prev").addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      contenedor.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
   });
 });
