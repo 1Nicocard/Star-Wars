@@ -201,9 +201,14 @@ input {
 
 /*grupos de filas________________________________________________________________________________________________________________*/
 
-.container-mayor{
-    display: flex;
-    
+.container-mayor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 40px 120px;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
 }
 
 
@@ -226,10 +231,11 @@ input {
     border-radius: 50px;
     justify-items: center;
     background-color: rgb(16, 16, 16);
-    width: 390px;
+    width: 405px;
     height: 600px;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 
 .element:hover {
     color: rgb(255, 255, 255);
@@ -287,80 +293,25 @@ button {
 }
 
 #container-mayor {
-    display: flex;
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    scroll-behavior: smooth; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 40px 120px;
     width: 100%;
-    max-width: 82%;
+    max-width: 1400px;
     margin: auto;
-    gap: 20px; 
-    padding: 10px;
-}
-
-/* Contenedor de elementos en el carrusel______________________________________________________________________________ */
-
-.carrusel {
-  display: flex;
-    padding-left: 800px;
-    padding-right: 1000px;
-    margin-top: 70px;
-    display: flex;
-    gap:50px;
-    height: 750px;
 }
 
 
-/* Elementos individuales______________________________________________________________________________________________ */
-.element {
-    flex: 0 0 calc(25% - 115px); 
-    scroll-snap-align: start; 
-    
-}
+
+
+
 
 /* Ocultar la barra de desplazamiento en algunos navegadores______________________________________________________________ */
 #container-mayor::-webkit-scrollbar {
     display: none;
 }
 
-/* Flechas de navegación__________________________________________________________________________________________________ */
-.nav-container {
-    
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-    height: 700px;
-    max-width: 87%;
-    margin: auto;
-}
-
-.nav-button {
-
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 40px;
-    padding: 25px;
-    margin-top: 350px;
-    height: 50px;
-    text-decoration: none;
-    z-index: 10;
-    position: relative;
-}
-
-
-.nav-button.left {
-    
-    position: absolute;
-    left: 10px;
-}
-
-.nav-button.right {
-    position: absolute;
-    right: 10px;
-}
 
 
 /*Footer_____________________________________________________________________________________________________________________*/
@@ -443,7 +394,7 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 100vh; /* Ajusta la altura según necesites */
+    height: 100vh; 
 }
 
 

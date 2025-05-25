@@ -32,8 +32,11 @@ function mostrarCatalogo(lista = personajes) {
 
 // Redirige al detalle del personaje
 function verDetalle(id) {
-  window.location.href = `Element.html?id=${id}`;
+  const params = new URLSearchParams(window.location.search);
+  const nombre = params.get("nombre");
+  window.location.href = `Element.html?id=${id}&nombre=${nombre}`;
 }
+
 
 // Establece los enlaces de navegación con el nombre del usuario desde la URL
 function aplicarLinksEstáticosConNombre() {
