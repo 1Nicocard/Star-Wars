@@ -25,7 +25,7 @@ function verDetalle(id, nombre) {
   window.location.href = `Element.html?id=${id}&nombre=${encodeURIComponent(nombre)}`;
 }
 
-// Muestra los personajes 
+// Muestra los personajes __________________________________________________________________________________________________________________________________
 function mostrarFavoritos(lista = []) {
   const contenedor = document.getElementById("favoritos-container");
   contenedor.innerHTML = "";
@@ -70,12 +70,12 @@ function aplicarLinksEstáticosConNombre() {
   if (catalogo) catalogo.href = `Catalogo.html?nombre=${nombre}`;
 }
 
-// Buscador funcionando
+// Buscador ______________________________________________________________________________________________________________________________
 document.getElementById("input-buscador").addEventListener("input", () => {
   const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
 
   if (texto === "") {
-    mostrarFavoritos(favoritosData); // ← Aquí se pasa la lista completa
+    mostrarFavoritos(favoritosData);
   } else {
     const filtrados = favoritosData.filter(p =>
       p.nombre.toLowerCase().includes(texto)

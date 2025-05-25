@@ -1,4 +1,4 @@
-// Mostrar los personajes en filas de 3
+// Mostrar los personajes____________________________________________________________________________________________________________________________
 
 function mostrarCatalogo(lista = personajes) {
   const contenedor = document.getElementById("container-mayor");
@@ -30,7 +30,7 @@ function mostrarCatalogo(lista = personajes) {
   }
 }
 
-// Redirige al detalle del personaje
+// Redirige al detalle del personaje _____________________________________________________________________________________________________________
 function verDetalle(id) {
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
