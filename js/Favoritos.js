@@ -1,8 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+// Tomar el nombre desde la URL
+
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
 
+// Establecer enlaces de navegación
+
   aplicarLinksEstáticosConNombre();
+
+ // Buscar el usuario
 
   const usuario = usuarios.find(u => u.nombre === nombre);
   const contenedor = document.getElementById("carrusel-dinamico");
@@ -16,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("favoritos-container").textContent = "No tienes personajes favoritos aún.";
     return;
   }
+
+  // Mostrar personajes favoritos
 
   usuario.favoritos.forEach(id => {
     const personaje = personajes.find(p => p.id === id);
@@ -58,6 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+  // Guardamos los personajes favoritos en la variable global
+  favoritosData = usuario.favoritos.map(id => personajes.find(p => p.id === id)).filter(Boolean);
+
+  mostrarFavoritos(favoritosData);
 // Establece los enlaces de navegación con el nombre del usuario desde la URL
 
 function aplicarLinksEstáticosConNombre() {
@@ -77,3 +90,16 @@ function aplicarLinksEstáticosConNombre() {
   if (catalogo) catalogo.href = `Catalogo.html?nombre=${nombre}`; 
 }
 
+// Buscador funcionando
+document.getElementById("input-buscador").addEventListener("input", () => {
+  const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
+
+  if (texto === "") {
+    mostrarFavoritos(); // Muestra todos
+  } else {
+    const filtrados = favoritosData.filter(p =>
+      p.nombre.toLowerCase().includes(texto)
+    );
+    mostrarFavoritos(filtrados); // Muestra solo los que coincidan
+  }
+});
