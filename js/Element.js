@@ -293,7 +293,7 @@ const personajes = [
     genero: "Masculino",
     planeta: "Desconocido",
     imagen: "../Assets/grogu.webp",
-    peliculas: []
+    peliculas: ["../Assets/serie1.webp"]
   }
 ];
 

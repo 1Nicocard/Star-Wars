@@ -61,16 +61,32 @@ function aplicarLinksEstáticosConNombre() {
 
   if (!nombre) return;
 
+  const catalogo = document.getElementById("link-catalogo");
   const favoritos = document.getElementById("link-favoritos");
   const perfil = document.getElementById("link-perfil");
   const icono = document.getElementById("link-icono");
-  const catalogo = document.getElementById("link-catalogo");
+  const imagenPerfil = document.getElementById("imagenperfil");
 
-  if (favoritos) favoritos.href = `Favoritos.html?nombre=${nombre}`;
+  if (catalogo) catalogo.href = `Catalogo.html?nombre=${nombre}`;
+  if (favoritos) favoritos.href = ` Catalogo.html?nombre=${nombre}`;
   if (perfil) perfil.href = `Profile.html?nombre=${nombre}`;
   if (icono) icono.href = `Profile.html?nombre=${nombre}`;
-  if (catalogo) catalogo.href = `Catalogo.html?nombre=${nombre}`;
+
+
+  const usuario = usuarios.find(u => u.nombre === nombre);
+
+  // Cambiar la imagen si el usuario existe y tiene foto _________________________________________________________________________________________________
+
+  if (usuario && usuario.foto && imagenPerfil) {
+    imagenPerfil.src = usuario.foto;
+    imagenPerfil.alt = `Foto de perfil de ${nombre}`;
+  }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  mostrarCatalogo();
+  aplicarLinksEstáticosConNombre();
+});
 
 // Buscador _________________________________________________________________________________________________________________________________________________
 
