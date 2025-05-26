@@ -37,9 +37,8 @@ button:hover {
    background-color: rgb(26, 69, 171);
    color: rgb(255, 255, 255);
    box-shadow: 0 0 40px rgb(26, 69, 171);
-   /* Efecto de brillo */
    filter: brightness(1.2);
-   /* Aumenta la luminosidad */
+
 }
 
 
@@ -510,10 +509,6 @@ h4 {
       margin: 0 auto;
    }
 }
-
-
-
-
 
 
 /*Boton_____________________________________________________________________________________________________*/

@@ -14,8 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     alert(resultado.mensaje);
 
+     // Redirigir al catálogo con el nombre en la URL ____________________________________________________________________________________________
+
     if (resultado.exito) {
-      // Redirigir al catálogo con el nombre en la URL ____________________________________________________________________________________________
+    
       const usuario = obtenerUsuarioLogueado();
       const query = `?nombre=${encodeURIComponent(usuario.nombre)}`;
       window.location.href = "Catalogo.html" + query;

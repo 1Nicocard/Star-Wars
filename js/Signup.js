@@ -1,9 +1,12 @@
-// Arreglo de 3 usuarios_____________________________________________________________________________________________________
+// Arreglo de 5 usuarios registrados_____________________________________________________________________________________________________
 
 const usuarios = [
   { nombre: "Luke", correo: "luke@jedi.com", contraseña: "1234" },
   { nombre: "Leia", correo: "leia@rebeldes.com", contraseña: "4567" },
-  { nombre: "Han", correo: "han@falcon.com", contraseña: "7890" }
+  { nombre: "Han", correo: "han@falcon.com", contraseña: "7890" },
+  { nombre: "Yoda", correo: "yoda@kiut.com", contraseña: "1011" },
+  { nombre: "Obi", correo: "obi@wan.com", contraseña: "1213" }
+
 ];
 
 // Funciones y mensajes_____________________________________________________________________________________________________

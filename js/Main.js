@@ -34,15 +34,11 @@ const equipo = [
   new Integrante("Nicolas Cardenas", "Cazador de easter eggs", "../Assets/nicoo.jpg", "Diseñador UX", "https://www.behance.net/nicolascardena8"),
 ];
 
-
-
 const contenedor = document.getElementById("contenedor-integrantes");
-
 
 contenedor.innerHTML = equipo.map(integrante => integrante.render()).join("");
 
-
-// parte de contacto________________________________________________________________________________________________________
+//ontacto________________________________________________________________________________________________________
 
 
 window.onload = function () {
@@ -58,7 +54,7 @@ window.onload = function () {
     if (nombre === "" || correo === "" || mensaje === "") {
       alert("⚠️ Por favor llena todos los campos.");
     } else {
-      alert("✨✨✨¡Tu mensaje fue enviado con éxito!✨✨✨");
+      alert("✨✨✨ ¡Tu mensaje fue enviado con éxito! ✨✨✨");
       document.forms[0].reset();
     }
   };
