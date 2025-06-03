@@ -30,8 +30,8 @@ class Integrante {
 // Arreglo de 2 integrantes________________________________________________________________________________________________________
 
 const equipo = [
-  new Integrante("Hanna Muriel", "Maestra de teorías", "../Assets/hannaa.jpg", "Diseñadora UI", "https://www.behance.net/hannamuriel"),
-  new Integrante("Nicolas Cardenas", "Cazador de easter eggs", "../Assets/nicoo.jpg", "Diseñador UX", "https://www.behance.net/nicolascardena8"),
+  new Integrante("Hanna Muriel", "Maestra de teorías", "Img/hannaa.jpg", "Diseñadora UI", "https://www.behance.net/hannamuriel"),
+  new Integrante("Nicolas Cardenas", "Cazador de easter eggs", "Img/nicoo.jpg", "Diseñador UX", "https://www.behance.net/nicolascardena8"),
 ];
 
 const contenedor = document.getElementById("contenedor-integrantes");
