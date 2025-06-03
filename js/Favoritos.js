@@ -45,7 +45,7 @@ function mostrarFavoritos(lista = []) {
       </div>
       <div id="boto-estrella">
         <div><button id="Boton" onclick="verDetalle(${personaje.id}, '${nombre}')">MÁS DETALLES</button></div>
-        <div id="estrella"><img src="../Assets/estrella-fav.png" alt="estrella" width="55px"></div>
+        <div id="estrella"><img src="../Img/estrella-fav.png" alt="estrella" width="55px"></div>
       </div>
     `;
 
