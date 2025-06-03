@@ -40,7 +40,7 @@ const personajes = [
       "../Img/6.jpeg",
       "../Img/7.webp",
       "../Img/8.webp",
-      "../ImgAssets/9.webp"
+      "../Img/9.webp"
     ]
   },
 
