@@ -12,13 +12,13 @@ const personajes = [
     nacimiento: "896 BBY",
     genero: "Masculino",
     planeta: "Desconocido",
-    imagen: "../Assets/yoda.webp",
+    imagen: "../Img/yoda.webp",
     peliculas: [
-      "../Assets/2.jpeg",
-      "../Assets/3.jpeg",
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg"
+      "../Img/2.jpeg",
+      "../Img/3.jpeg",
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg"
     ]
   },
 
@@ -33,14 +33,14 @@ const personajes = [
     nacimiento: "19 BBY",
     genero: "Masculino",
     planeta: "Tatooine",
-    imagen: "../Assets/Luke skywalker.png",
+    imagen: "../Img/Luke skywalker.png",
     peliculas: [
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg",
-      "../Assets/7.webp",
-      "../Assets/8.webp",
-      "../Assets/9.webp"
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg",
+      "../Img/7.webp",
+      "../Img/8.webp",
+      "../ImgAssets/9.webp"
     ]
   },
 
@@ -55,14 +55,14 @@ const personajes = [
     nacimiento: "19 BBY",
     genero: "Femenino",
     planeta: "Alderaan",
-    imagen: "../Assets/Leia_Organa.webp",
+    imagen: "../Img/Leia_Organa.webp",
     peliculas: [
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg",
-      "../Assets/7.webp",
-      "../Assets/8.webp",
-      "../Assets/9.webp"
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg",
+      "../Img/7.webp",
+      "../Img/8.webp",
+      "../Img/9.webp"
     ]
   },
   {
@@ -76,15 +76,15 @@ const personajes = [
     nacimiento: "200 BBY",
     genero: "Masculino",
     planeta: "Kashyyyk",
-    imagen: "../Assets/Chewbacca.webp",
+    imagen: "../Img/Chewbacca.webp",
     peliculas: [
-      "../Assets/3.jpeg",
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg",
-      "../Assets/7.webp",
-      "../Assets/8.webp",
-      "../Assets/9.webp"
+      "../Img/3.jpeg",
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg",
+      "../Img/7.webp",
+      "../Img/8.webp",
+      "../Img/9.webp"
     ]
   },
   {
@@ -98,15 +98,15 @@ const personajes = [
     nacimiento: "33 BBY",
     genero: "Desconocido",
     planeta: "Naboo",
-    imagen: "../Assets/R2-D2.webp",
+    imagen: "../Img/R2-D2.webp",
     peliculas: [
-      "../Assets/1.webp",
-      "../Assets/2.jpeg",
-      "../Assets/3.jpeg",
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg",
-      "../Assets/7.webp"
+      "../Img/1.webp",
+      "../Img/2.jpeg",
+      "../Img/3.jpeg",
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg",
+      "../Img/7.webp"
     ]
   },
   {
@@ -120,14 +120,14 @@ const personajes = [
     nacimiento: "82 BBY",
     genero: "Masculino",
     planeta: "Naboo",
-    imagen: "../Assets/Emperor_Palpatine.webp",
+    imagen: "../Img/Emperor_Palpatine.webp",
     peliculas: [
-      "../Assets/1.webp",
-      "../Assets/2.jpeg",
-      "../Assets/3.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg",
-      "../Assets/9.webp"
+      "../Img/1.webp",
+      "../Img/2.jpeg",
+      "../Img/3.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg",
+      "../Img/9.webp"
     ]
   },
   {
@@ -141,12 +141,12 @@ const personajes = [
     nacimiento: "41.9 BBY",
     genero: "Masculino",
     planeta: "Tatooine",
-    imagen: "../Assets/DarthVader.webp",
+    imagen: "../Img/DarthVader.webp",
     peliculas: [
-      "../Assets/3.jpeg",
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg"
+      "../Img/3.jpeg",
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg"
     ]
   },
   {
@@ -160,9 +160,9 @@ const personajes = [
     nacimiento: "54 BBY",
     genero: "Masculino",
     planeta: "Dathomir",
-    imagen: "../Assets/Darth-Maul.webp",
+    imagen: "../Img/Darth-Maul.webp",
     peliculas: [
-      "../Assets/1.webp"
+      "../Img/1.webp"
     ]
   },
   {
@@ -176,11 +176,11 @@ const personajes = [
     nacimiento: "Desconocido",
     genero: "Desconocido",
     planeta: "Desconocido",
-    imagen: "../Assets/BB8.webp",
+    imagen: "../Img/BB8.webp",
     peliculas: [
-      "../Assets/7.webp",
-      "../Assets/8.webp",
-      "../Assets/9.webp"
+      "../Img/7.webp",
+      "../Img/8.webp",
+      "../Img/9.webp"
     ]
   },
   {
@@ -194,12 +194,12 @@ const personajes = [
     nacimiento: "29 BBY",
     genero: "Masculino",
     planeta: "Corellia",
-    imagen: "../Assets/han.webp",
+    imagen: "../Img/han.webp",
     peliculas: [
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg",
-      "../Assets/7.webp"
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg",
+      "../Img/7.webp"
     ]
   },
   {
@@ -213,17 +213,17 @@ const personajes = [
     nacimiento: "112 BBY",
     genero: "Masculino",
     planeta: "Tatooine",
-    imagen: "../Assets/c3po.webp",
+    imagen: "../Img/c3po.webp",
     peliculas: [
-      "../Assets/1.webp",
-      "../Assets/2.jpeg",
-      "../Assets/3.jpeg",
-      "../Assets/4.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg",
-      "../Assets/7.webp",
-      "../Assets/8.webp",
-      "../Assets/9.webp"
+      "../Img/1.webp",
+      "../Img/2.jpeg",
+      "../Img/3.jpeg",
+      "../Img/4.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg",
+      "../Img/7.webp",
+      "../Img/8.webp",
+      "../Img/9.webp"
     ]
   },
   {
@@ -237,12 +237,12 @@ const personajes = [
     nacimiento: "57 BBY",
     genero: "Masculino",
     planeta: "Stewjon",
-    imagen: "../Assets/obiwan.webp",
+    imagen: "../Img/obiwan.webp",
     peliculas: [
-      "../Assets/1.webp",
-      "../Assets/2.jpeg",
-      "../Assets/3.jpeg",
-      "../Assets/4.jpeg"
+      "../Img/1.webp",
+      "../Img/2.jpeg",
+      "../Img/3.jpeg",
+      "../Img/4.jpeg"
     ]
   },
   {
@@ -256,11 +256,11 @@ const personajes = [
     nacimiento: "31.5 BBY",
     genero: "Masculino",
     planeta: "Kamino",
-    imagen: "../Assets/boba.png",
+    imagen: "../Img/boba.png",
     peliculas: [
-      "../Assets/2.jpeg",
-      "../Assets/5.jpeg",
-      "../Assets/6.jpeg"
+      "../Img/2.jpeg",
+      "../Img/5.jpeg",
+      "../Img/6.jpeg"
     ]
   },
   {
@@ -274,11 +274,11 @@ const personajes = [
     nacimiento: "5 ABY",
     genero: "Masculino",
     planeta: "Chandrila",
-    imagen: "../Assets/kylo.png",
+    imagen: "../Img/kylo.png",
     peliculas: [
-      "../Assets/7.webp",
-      "../Assets/8.webp",
-      "../Assets/9.webp"
+      "../Img/7.webp",
+      "../Img/8.webp",
+      "../Img/9.webp"
     ]
   },
   {
@@ -292,8 +292,8 @@ const personajes = [
     nacimiento: "41 BBY",
     genero: "Masculino",
     planeta: "Desconocido",
-    imagen: "../Assets/grogu.webp",
-    peliculas: ["../Assets/serie1.webp"]
+    imagen: "../Img/grogu.webp",
+    peliculas: ["../Img/serie1.webp"]
   }
 ];
 
