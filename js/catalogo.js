@@ -19,7 +19,7 @@ function mostrarCatalogo(lista = personajes) {
         <div id="texto"><h2 id="h2b">${p.nombre.toUpperCase()}</h2></div>
         <div id="boto-estrella">
           <div><button id="Boton" onclick="verDetalle(${p.id})">MÁS DETALLES</button></div>
-          <div id="estrella"><img src="../Assets/estrella.png" alt="favorito" width="55px"></div>
+          <div id="estrella"><img src="../Img/estrella.png" alt="favorito" width="55px"></div>
         </div>
       `;
 

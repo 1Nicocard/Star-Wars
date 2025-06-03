@@ -6,28 +6,28 @@ const usuarios = [
     contraseña: "1234",
     correo: "luke@jedi.com",
     favoritos: [1, 3, 12], // Yoda, Leia, Obi-Wan
-    foto: "../Assets/../Assets/Foto de perfil.jpg"
+    foto: "../Assets/../Img/Foto de perfil.jpg"
   },
   {
     nombre: "Leia",
     contraseña: "4567",
     correo: "leia@rebeldes.com",
     favoritos: [2, 10, 15], // Luke Skywalker, Han Solo, Grogu
-    foto: "../Assets/../Assets/Foto de perfil2.jpg"
+    foto: "../Assets/../Img/Foto de perfil2.jpg"
   },
   {
     nombre: "Han",
     contraseña: "7890",
     correo: "han@falcon.com",
     favoritos: [4, 11, 5], // Chewbacca, C-3PO, R2-D2
-    foto: "../Assets/../Assets/Foto de perfil3.jpg"
+    foto: "../Assets/../Img/Foto de perfil3.jpg"
   },
   {
     nombre: "Yoda",
     contraseña: "1011",
     correo: "yoda@kiut.com",
     favoritos: [15], //Grogu
-    foto: "../Assets/../Assets/Foto de perfil4.jpg"
+    foto: "../Assets/../Img/Foto de perfil4.jpg"
   },
 
   {
@@ -35,7 +35,7 @@ const usuarios = [
     contraseña: "1213",
     correo: "obi@wan.com",
     favoritos: [], //No tiene favoritos
-    foto: "../Assets/../Assets/Foto de perfil5.jpg"
+    foto: "../Assets/../Img/Foto de perfil5.jpg"
   },
 ];
 
