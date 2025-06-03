@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cerrarSesionBtn.addEventListener("click", () => {
 
 
-      window.location.href = "../Pages/Main.html";
+      window.location.href = "../Main.html";
     });
   }
 });
