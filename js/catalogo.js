@@ -1,3 +1,43 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const correoLogueado = localStorage.getItem("correoLogueado");
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  if (!correoLogueado) {
+    alert("⚠️ No hay sesión activa. Inicia sesión para ver tu catálogo.");
+    window.location.href = "Login.html";
+    return;
+  }
+
+  const usuario = usuarios.find(u => u.correo === correoLogueado);
+  if (!usuario) {
+    alert("❌ Usuario no encontrado.");
+    return;
+  }
+
+  // Mostrar bienvenida solo si no se ha mostrado aún en esta sesión
+  if (!sessionStorage.getItem("saludoMostrado")) {
+    alert(`👋 ¡Bienvenido, ${usuario.nombre}!`);
+    sessionStorage.setItem("saludoMostrado", "true");
+  }
+
+  // Asegurar que el nombre esté en la URL
+  const params = new URLSearchParams(window.location.search);
+  const yaTieneNombreEnURL = params.get("nombre");
+
+  if (!yaTieneNombreEnURL) {
+    window.location.search = `?nombre=${encodeURIComponent(usuario.nombre)}`;
+    return;
+  }
+
+  aplicarLinksEstáticosConNombre(usuario.nombre);
+  obtenerPersonajes().then(personajes => {
+    mostrarCatalogo(personajes);
+  });
+});
+
+
+
+
 // Mostrar los personajes en el catálogo ____________________________________________________________________________________________
 async function mostrarCatalogo(lista = []) {
   const contenedor = document.getElementById("container-mayor");
@@ -52,22 +92,19 @@ async function obtenerPersonajes() {
 }
 
 // Establece los enlaces de la nav con el nombre del usuario ____________________________________________________________________________
-function aplicarLinksEstáticosConNombre() {
-  const params = new URLSearchParams(window.location.search);
-  const nombre = params.get("nombre");
-
+function aplicarLinksEstáticosConNombre(nombre) {
   if (!nombre) return;
 
   const favoritos = document.getElementById("link-favoritos");
   const perfil = document.getElementById("link-perfil");
   const icono = document.getElementById("link-icono");
   const imagenPerfil = document.getElementById("imagenperfil");
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
   if (favoritos) favoritos.href = `Favoritos.html?nombre=${nombre}`;
   if (perfil) perfil.href = `Profile.html?nombre=${nombre}`;
   if (icono) icono.href = `Profile.html?nombre=${nombre}`;
 
-  // Cambiar la imagen de perfil si el usuario tiene foto __________________________________________________________________________________
   const usuario = usuarios.find(u => u.nombre === nombre);
   if (usuario && usuario.foto && imagenPerfil) {
     imagenPerfil.src = usuario.foto;
@@ -75,13 +112,6 @@ function aplicarLinksEstáticosConNombre() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  obtenerPersonajes().then(personajes => {
-    mostrarCatalogo(personajes);
-  });
-
-  aplicarLinksEstáticosConNombre();
-});
 
 // Buscador _____________________________________________________________________________________________________________________________
 document.getElementById("input-buscador").addEventListener("input", () => {

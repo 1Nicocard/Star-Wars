@@ -1,62 +1,142 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const nombre = params.get("nombre");
+  const correoLogueado = localStorage.getItem("correoLogueado");
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const contenedor = document.getElementById("perfil-container");
 
-  const usuario = usuarios.find(u => u.nombre === nombre);
+  if (!correoLogueado) {
+    contenedor.innerHTML = "<p style='color: white; text-align: center;'>No hay sesión activa.</p>";
+    return;
+  }
 
+  let usuario = usuarios.find(u => u.correo === correoLogueado);
   if (!usuario) {
-    const contenedor = document.getElementById("perfil-container");
     contenedor.innerHTML = "<p style='color: white; text-align: center;'>Usuario no encontrado.</p>";
     return;
   }
 
-  document.getElementById("username").value = usuario.nombre;
-  document.getElementById("email").value = usuario.correo;
-  document.getElementById("password").value = usuario.contraseña.replace(/./g, "*");
-
-  // Mostrar la imagen del perfil ________________________________________________________________________________________
+  // Elementos
+  const usernameInput = document.getElementById("username");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
   const profileImage = document.querySelector(".profile-picture img");
+  const fotoInput = document.getElementById("fotoInput");
+  const editarBtn = document.getElementById("editarBtn");
+  const guardarBtn = document.getElementById("guardarBtn");
+  const cerrarSesionBtn = document.querySelector(".cerrar-button");
+  const flecha = document.getElementById("flecha-regreso");
+
+  let modoEdicion = false;
+
+  // Mostrar datos
+  usernameInput.value = usuario.nombre;
+  emailInput.value = usuario.correo;
+  passwordInput.value = "********";
+  usernameInput.disabled = true;
+  emailInput.disabled = true;
+  passwordInput.disabled = true;
+
+  fotoInput.style.display = "none";
+  guardarBtn.style.display = "none";
+
   if (usuario.foto && profileImage) {
     profileImage.src = usuario.foto;
   }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cerrarSesionBtn = document.getElementById("cerrarSesionBtn");
+  // Activar edición
+  editarBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modoEdicion = true;
+    usernameInput.disabled = false;
+    emailInput.disabled = false;
+    passwordInput.disabled = false;
+    passwordInput.value = usuario.contraseña;
 
+    fotoInput.style.display = "block";
+    guardarBtn.style.display = "inline-block";
+    editarBtn.style.display = "none";
+  });
+
+  // Cambiar imagen al hacer clic
+  profileImage.addEventListener("click", () => {
+    if (modoEdicion) {
+      fotoInput.click();
+    }
+  });
+
+  // Previsualización de la imagen
+  fotoInput.addEventListener("change", () => {
+    const archivo = fotoInput.files[0];
+    if (archivo) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        profileImage.src = reader.result;
+        usuario.foto = reader.result;
+      };
+      reader.readAsDataURL(archivo);
+    }
+  });
+
+  // Guardar cambios
+  guardarBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const nuevoNombre = usernameInput.value.trim();
+    const nuevoCorreo = emailInput.value.trim().toLowerCase();
+    const nuevaContraseña = passwordInput.value;
+
+    if (!nuevoNombre || !nuevoCorreo || !nuevaContraseña) {
+      alert("❌ Todos los campos son obligatorios.");
+      return;
+    }
+
+    const otroUsuario = usuarios.find(u =>
+      u.correo === nuevoCorreo && u.correo !== usuario.correo
+    );
+
+    if (otroUsuario) {
+      alert("❌ Ya existe un usuario con ese correo.");
+      return;
+    }
+
+    // Actualizar datos
+    usuario.nombre = nuevoNombre;
+    usuario.correo = nuevoCorreo;
+    usuario.contraseña = nuevaContraseña;
+
+    const index = usuarios.findIndex(u => u.correo === correoLogueado);
+    usuarios[index] = usuario;
+
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    localStorage.setItem("correoLogueado", nuevoCorreo);
+
+    // Actualizar referencia al nuevo usuario
+    usuario = usuarios[index];
+
+    // Desactivar edición
+    modoEdicion = false;
+    usernameInput.disabled = true;
+    emailInput.disabled = true;
+    passwordInput.disabled = true;
+    passwordInput.value = "********";
+
+    fotoInput.style.display = "none";
+    guardarBtn.style.display = "none";
+    editarBtn.style.display = "inline-block";
+
+    alert("✅ Perfil actualizado correctamente.");
+  });
+
+  // Cerrar sesión
   if (cerrarSesionBtn) {
-    cerrarSesionBtn.addEventListener("click", () => {
-
-
+    cerrarSesionBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("correoLogueado");
       window.location.href = "../Main.html";
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const editarBtn = document.getElementById("editarBtn");
-
-  if (editarBtn) {
-    editarBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const params = new URLSearchParams(window.location.search);
-      const nombre = params.get("nombre");
-
-      // Redirigir a PerfilEdicion.html con el nombre como parámetro _____________________________________________________________________________
-      if (nombre) {
-        window.location.href = `../Pages/Profile edition.html?nombre=${encodeURIComponent(nombre)}`;
-      }
-    });
+  // Flecha de regreso
+  if (flecha) {
+    flecha.href = "Catalogo.html";
   }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const nombre = params.get("nombre");
-
-  const flecha = document.getElementById("flecha-regreso");
-  if (nombre && flecha) {
-    flecha.href = `Catalogo.html?nombre=${encodeURIComponent(nombre)}`;
-  }
-});
-
