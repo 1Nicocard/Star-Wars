@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mostrar datos
   usernameInput.value = usuario.nombre;
   emailInput.value = usuario.correo;
-  passwordInput.value = "********";
+  passwordInput.value = usuario.contraseña;;
   usernameInput.disabled = true;
   emailInput.disabled = true;
   passwordInput.disabled = true;
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     usernameInput.disabled = true;
     emailInput.disabled = true;
     passwordInput.disabled = true;
-    passwordInput.value = "********";
+    passwordInput.value = usuario.contraseña;
 
     fotoInput.style.display = "none";
     guardarBtn.style.display = "none";
@@ -137,6 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Flecha de regreso
   if (flecha) {
-    flecha.href = "Catalogo.html";
-  }
+  flecha-.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "./Pages/Catalogo.html";
+  });
+}
 });
