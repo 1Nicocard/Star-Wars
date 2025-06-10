@@ -1,21 +1,20 @@
-// Arreglo de 5 usuarios registrados_____________________________________________________________________________________________________
+// Funciones para manejar usuarios en localStorage____________________________________________________________
 
-const usuarios = [
-  { nombre: "Luke", correo: "luke@jedi.com", contraseña: "1234" },
-  { nombre: "Leia", correo: "leia@rebeldes.com", contraseña: "4567" },
-  { nombre: "Han", correo: "han@falcon.com", contraseña: "7890" },
-  { nombre: "Yoda", correo: "yoda@kiut.com", contraseña: "1011" },
-  { nombre: "Obi", correo: "obi@wan.com", contraseña: "1213" }
+function cargarUsuarios() {
+  const datos = localStorage.getItem("usuarios");
+  return datos ? JSON.parse(datos) : [];
+}
 
-];
-
-// Funciones y mensajes_____________________________________________________________________________________________________
+function guardarUsuarios(listaUsuarios) {
+  localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));
+}
 
 function registrarUsuario(nombre, correo, contraseña, confirmar) {
   if (!nombre || !correo || !contraseña || !confirmar) {
     return { exito: false, mensaje: "🪐Todos los campos son obligatorios." };
   }
 
+  const usuarios = cargarUsuarios();
   const yaExiste = usuarios.some((u) => u.correo === correo);
   if (yaExiste) {
     return { exito: false, mensaje: "✨Este correo ya está registrado." };
@@ -26,10 +25,9 @@ function registrarUsuario(nombre, correo, contraseña, confirmar) {
   }
 
   usuarios.push({ nombre, correo, contraseña });
+  guardarUsuarios(usuarios);
   return { exito: true, mensaje: "🚀Usuario registrado correctamente." };
 }
-
-// Evento del boton registrarse________________________________________________________________________________________________________
 
 document.getElementById("btn-registrar").addEventListener("click", () => {
   const nombre = document.querySelector('input[name="nombre"]').value;
@@ -39,21 +37,19 @@ document.getElementById("btn-registrar").addEventListener("click", () => {
 
   const resultado = registrarUsuario(nombre, correo, contraseña, confirmar);
 
-
-  // Mostrar mensaje____________________________________________________________________________________________________________________
-
   alert(resultado.mensaje);
 
   const btnIrLogin = document.getElementById("btn-ir-login");
-  if (resultado.exito) {
-    btnIrLogin.style.display = "inline";
-  } else {
-    btnIrLogin.style.display = "none";
-  }
-});
 
-// Evento del boton ir al login______________________________________________________________________________________________________
+if (resultado.exito) {
+  btnIrLogin.style.display = "inline";
 
-document.getElementById("btn-ir-login").addEventListener("click", () => {
-  window.location.href = "Login.html";
+  // ✅ Redirige al hacer clic
+  btnIrLogin.addEventListener("click", () => {
+    window.location.href = "Login.html";
+  });
+
+} else {
+  btnIrLogin.style.display = "none";
+}
 });
