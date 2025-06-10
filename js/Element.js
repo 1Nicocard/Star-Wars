@@ -1,350 +1,4 @@
-// Detalle del elemento __________________________________________________________________________________________
-
-const personajes = [
-  {
-    id: 1,
-    nombre: "YODA",
-    altura: "66 cm",
-    masa: "17 kg",
-    cabello: "Blanco",
-    piel: "Verde",
-    ojos: "Marrón",
-    nacimiento: "896 BBY",
-    genero: "Masculino",
-    planeta: "Desconocido",
-    imagen: "../Img/yoda.webp",
-    peliculas: [
-      "../Img/2.jpeg",
-      "../Img/3.jpeg",
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg"
-    ]
-  },
-
-  {
-    id: 2,
-    nombre: "LUKE SKYWALKER",
-    altura: "172 cm",
-    masa: "77 kg",
-    cabello: "Rubio",
-    piel: "Clara",
-    ojos: "Azul",
-    nacimiento: "19 BBY",
-    genero: "Masculino",
-    planeta: "Tatooine",
-    imagen: "../Img/Luke skywalker.png",
-    peliculas: [
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg",
-      "../Img/7.webp",
-      "../Img/8.webp",
-      "../Img/9.webp"
-    ]
-  },
-
-  {
-    id: 3,
-    nombre: "LEIA ORGANA",
-    altura: "150 cm",
-    masa: "49 kg",
-    cabello: "Castaño",
-    piel: "Clara",
-    ojos: "Marrón",
-    nacimiento: "19 BBY",
-    genero: "Femenino",
-    planeta: "Alderaan",
-    imagen: "../Img/Leia_Organa.webp",
-    peliculas: [
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg",
-      "../Img/7.webp",
-      "../Img/8.webp",
-      "../Img/9.webp"
-    ]
-  },
-  {
-    id: 4,
-    nombre: "WHEWBACCA",
-    altura: "228 cm",
-    masa: "112 kg",
-    cabello: "Marrón",
-    piel: "Desconocido",
-    ojos: "Azul",
-    nacimiento: "200 BBY",
-    genero: "Masculino",
-    planeta: "Kashyyyk",
-    imagen: "../Img/Chewbacca.webp",
-    peliculas: [
-      "../Img/3.jpeg",
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg",
-      "../Img/7.webp",
-      "../Img/8.webp",
-      "../Img/9.webp"
-    ]
-  },
-  {
-    id: 5,
-    nombre: "R2-D2",
-    altura: "96 cm",
-    masa: "32 kg",
-    cabello: "N/A",
-    piel: "Blanco y azul",
-    ojos: "Rojo",
-    nacimiento: "33 BBY",
-    genero: "Desconocido",
-    planeta: "Naboo",
-    imagen: "../Img/R2-D2.webp",
-    peliculas: [
-      "../Img/1.webp",
-      "../Img/2.jpeg",
-      "../Img/3.jpeg",
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg",
-      "../Img/7.webp"
-    ]
-  },
-  {
-    id: 6,
-    nombre: "PALPATINE",
-    altura: "170 cm",
-    masa: "75 kg",
-    cabello: "Gris",
-    piel: "Pálida",
-    ojos: "Amarillo",
-    nacimiento: "82 BBY",
-    genero: "Masculino",
-    planeta: "Naboo",
-    imagen: "../Img/Emperor_Palpatine.webp",
-    peliculas: [
-      "../Img/1.webp",
-      "../Img/2.jpeg",
-      "../Img/3.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg",
-      "../Img/9.webp"
-    ]
-  },
-  {
-    id: 7,
-    nombre: "DARTH VADER",
-    altura: "202 cm",
-    masa: "136 kg",
-    cabello: "Ninguno",
-    piel: "Pálida",
-    ojos: "Amarillo",
-    nacimiento: "41.9 BBY",
-    genero: "Masculino",
-    planeta: "Tatooine",
-    imagen: "../Img/DarthVader.webp",
-    peliculas: [
-      "../Img/3.jpeg",
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg"
-    ]
-  },
-  {
-    id: 8,
-    nombre: "DARTH MAUL",
-    altura: "175 cm",
-    masa: "80 kg",
-    cabello: "Ninguno",
-    piel: "Rojo y negro",
-    ojos: "Amarillo",
-    nacimiento: "54 BBY",
-    genero: "Masculino",
-    planeta: "Dathomir",
-    imagen: "../Img/Darth-Maul.webp",
-    peliculas: [
-      "../Img/1.webp"
-    ]
-  },
-  {
-    id: 9,
-    nombre: "BB-8",
-    altura: "67 cm",
-    masa: "18 kg",
-    cabello: "N/A",
-    piel: "Blanco y naranja",
-    ojos: "Negro",
-    nacimiento: "Desconocido",
-    genero: "Desconocido",
-    planeta: "Desconocido",
-    imagen: "../Img/BB8.webp",
-    peliculas: [
-      "../Img/7.webp",
-      "../Img/8.webp",
-      "../Img/9.webp"
-    ]
-  },
-  {
-    id: 10,
-    nombre: "HAN SOLO",
-    altura: "180 cm",
-    masa: "80 kg",
-    cabello: "Castaño",
-    piel: "Clara",
-    ojos: "Marrón",
-    nacimiento: "29 BBY",
-    genero: "Masculino",
-    planeta: "Corellia",
-    imagen: "../Img/han.webp",
-    peliculas: [
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg",
-      "../Img/7.webp"
-    ]
-  },
-  {
-    id: 11,
-    nombre: "C-3PO",
-    altura: "167 cm",
-    masa: "75 kg",
-    cabello: "N/A",
-    piel: "Dorado",
-    ojos: "Amarillo",
-    nacimiento: "112 BBY",
-    genero: "Masculino",
-    planeta: "Tatooine",
-    imagen: "../Img/c3po.webp",
-    peliculas: [
-      "../Img/1.webp",
-      "../Img/2.jpeg",
-      "../Img/3.jpeg",
-      "../Img/4.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg",
-      "../Img/7.webp",
-      "../Img/8.webp",
-      "../Img/9.webp"
-    ]
-  },
-  {
-    id: 12,
-    nombre: "OBI-WAN KENOBI",
-    altura: "182 cm",
-    masa: "77 kg",
-    cabello: "Castaño",
-    piel: "Clara",
-    ojos: "Azul",
-    nacimiento: "57 BBY",
-    genero: "Masculino",
-    planeta: "Stewjon",
-    imagen: "../Img/obiwan.webp",
-    peliculas: [
-      "../Img/1.webp",
-      "../Img/2.jpeg",
-      "../Img/3.jpeg",
-      "../Img/4.jpeg"
-    ]
-  },
-  {
-    id: 13,
-    nombre: "BOBA FETT",
-    altura: "183 cm",
-    masa: "78 kg",
-    cabello: "Negro",
-    piel: "Clara",
-    ojos: "Marrón",
-    nacimiento: "31.5 BBY",
-    genero: "Masculino",
-    planeta: "Kamino",
-    imagen: "../Img/boba.png",
-    peliculas: [
-      "../Img/2.jpeg",
-      "../Img/5.jpeg",
-      "../Img/6.jpeg"
-    ]
-  },
-  {
-    id: 14,
-    nombre: "KYLO REN",
-    altura: "189 cm",
-    masa: "89 kg",
-    cabello: "Negro",
-    piel: "Clara",
-    ojos: "Marrón",
-    nacimiento: "5 ABY",
-    genero: "Masculino",
-    planeta: "Chandrila",
-    imagen: "../Img/kylo.png",
-    peliculas: [
-      "../Img/7.webp",
-      "../Img/8.webp",
-      "../Img/9.webp"
-    ]
-  },
-  {
-    id: 15,
-    nombre: "GROGU",
-    altura: "42 cm",
-    masa: "Desconocido",
-    cabello: "Blanco",
-    piel: "Verde",
-    ojos: "Negro",
-    nacimiento: "41 BBY",
-    genero: "Masculino",
-    planeta: "Desconocido",
-    imagen: "../Img/grogu.webp",
-    peliculas: ["../Img/serie1.webp"]
-  }
-];
-
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get("id"));
-
-  const personaje = personajes.find(p => p.id === id);
-
-  if (!personaje) {
-    document.getElementById("detalle-personaje").innerHTML = "<p>Personaje no encontrado</p>";
-    return;
-  }
-
-  const contenedor = document.getElementById("detalle-personaje");
-
-  contenedor.innerHTML = `
-    <!-- Imagen del personaje -->
-    <div class="image-container">
-      <img src="${personaje.imagen}" alt="${personaje.nombre}" class="character-image">
-    </div>
-
-    <!-- Información -->
-    <div class="info">
-      <h2 class="name">${personaje.nombre}</h2>
-
-      <div class="info-section">
-        <div class="h3"><h3>Información</h3></div>
-        <div class="info-grid">
-          <p><span>Nombre:</span> <strong>${personaje.nombre}</strong></p>
-          <p><span>Altura:</span> <strong>${personaje.altura}</strong></p>
-          <p><span>Masa:</span> <strong>${personaje.masa}</strong></p>
-          <p><span>Color de cabello:</span> <strong>${personaje.cabello}</strong></p>
-          <p><span>Color de piel:</span> <strong>${personaje.piel}</strong></p>
-          <p><span>Color de ojos:</span> <strong>${personaje.ojos}</strong></p>
-          <p><span>Año de nacimiento:</span> <strong>${personaje.nacimiento}</strong></p>
-          <p><span>Género:</span> <strong>${personaje.genero}</strong></p>
-          <p><span>Mundo natal:</span> <strong>${personaje.planeta}</strong></p>
-        </div>
-      </div>
-
-      <div class="linea-section">
-        <div class="h3"><h3>Películas</h3></div>
-        <div class="movies">
-          ${personaje.peliculas.map(peli => `<img src="${peli}" alt="Película">`).join('')}
-        </div>
-      </div>
-    </div>
-  `;
-});
-
+//Flecha ____________________________________________________________________________________________________________________
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
@@ -353,4 +7,55 @@ document.addEventListener("DOMContentLoaded", () => {
   if (nombre && flecha) {
     flecha.href = `Catalogo.html?nombre=${nombre}`;
   }
+});
+
+
+// Función para obtener datos de los personajes desde la API _________________________________________________________________
+async function obtenerPersonajes() {
+  try {
+    const respuesta = await fetch("https://akabab.github.io/starwars-api/api/all.json");
+    const personajes = await respuesta.json(); // Obtener los datos de la API
+    return personajes;
+  } catch (error) {
+    console.error("Error al obtener los personajes:", error);
+    return [];
+  }
+}
+
+// Redirige al detalle del personaje con la información del id_________________________________________________________________________
+document.addEventListener("DOMContentLoaded", () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get("id"));
+
+  // Obtener los personajes desde la API y buscar el personaje con el id proporcionado ________________________________________________
+  obtenerPersonajes().then(personajes => {
+    const personaje = personajes.find(p => p.id === id);
+
+    if (!personaje) {
+
+      document.getElementById("detalle-personaje").innerHTML = "<p>Personaje no encontrado</p>";
+      return;
+    }
+
+    // Mostrar los detalles del personaje ________________________________________________________________________________________
+    const contenedor = document.getElementById("detalle-personaje");
+    contenedor.innerHTML = `
+      <div class="image-container">
+        <img src="${personaje.image}" alt="${personaje.name}" class="character-image">
+      </div>
+
+      <div class="info">
+        <h2 class="name">${personaje.name}</h2>
+        <p><strong>Altura:</strong> ${personaje.height}</p>
+        <p><strong>Masa:</strong> ${personaje.mass}</p>
+        <p><strong>Género:</strong> ${personaje.gender}</p>
+        <p><strong>Planeta:</strong> ${personaje.homeworld}</p>
+        <p><strong>Especie:</strong> ${personaje.species}</p>
+        <p><strong>Año de nacimiento:</strong> ${personaje.born}</p>
+        <p><strong>Ubicación de nacimiento:</strong> ${personaje.bornLocation}</p>
+        <p><strong>Ubicación de muerte:</strong> ${personaje.diedLocation}</p>
+      </div>
+    `;
+  });
 });
