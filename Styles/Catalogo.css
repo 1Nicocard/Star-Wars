@@ -202,11 +202,14 @@ input {
     border: 0;
     border-radius: 50px;
 }
-
 /*grupos de filas________________________________________________________________________________________________________________*/
 
 .container-mayor{
     display: flex;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+  justify-content: center; 
     
 }
 
@@ -233,6 +236,13 @@ input {
     width: 405px;
     height: 600px;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+}
+
+
+
+.element img {
+    border-radius: 50px;
 }
 
 

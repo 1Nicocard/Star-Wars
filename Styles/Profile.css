@@ -205,6 +205,17 @@ button {
     font-weight: bold;
 }
 
+.save-button {
+    padding: 15px 30px;
+    background-color: rgb(26, 69, 171);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 /*Sección de foto_____________________________________________________________________________________________________________________*/
 .profile-container {
     width: 35%;
