@@ -43,7 +43,11 @@ async function mostrarCatalogo(lista = []) {
   contenedor.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevas tarjetas
 
   // Recuperar los favoritos del localStorage
-  const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+  const correoLogueado = localStorage.getItem("correoLogueado");
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+const usuario = usuarios.find(u => u.correo === correoLogueado);
+const favoritos = usuario?.favoritos?.map(f => Number(f)) || [];
+
 
   // Creación de filas de tarjetas y su contenido __________________________________________________________________________________
   for (let i = 0; i < lista.length; i += 3) {
@@ -82,34 +86,38 @@ async function mostrarCatalogo(lista = []) {
 
 // Función para agregar o eliminar un personaje de los favoritos
 function agregarOEliminarDeFavoritos(id, name, image, estrellaElement) {
-  const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const correoLogueado = localStorage.getItem("correoLogueado");
 
-  // Verificar si el personaje ya está en los favoritos
-  const personajeYaFavorito = favoritos.some(p => p.id === id);
+  const usuarioIndex = usuarios.findIndex(u => u.correo === correoLogueado);
+  if (usuarioIndex === -1) {
+    alert("No has iniciado sesión."); 
+    return;
+  }
 
-  if (personajeYaFavorito) {
-    // Eliminar del array de favoritos
-    const favoritosActualizados = favoritos.filter(p => p.id !== id);
-    localStorage.setItem("favoritos", JSON.stringify(favoritosActualizados));
+  if (!usuarios[usuarioIndex].favoritos) {
+    usuarios[usuarioIndex].favoritos = [];
+  }
 
-    // Cambiar la imagen de la estrella a la de "estrella.png"
-    estrellaElement.src = "../Img/estrella.png"; // Imagen de estrella desmarcada
+  const favoritos = usuarios[usuarioIndex].favoritos.map(fav => Number(fav));
+  const idNumero = Number(id);
+  const estaEnFavoritos = favoritos.includes(idNumero);
 
+  if (estaEnFavoritos) {
+    usuarios[usuarioIndex].favoritos = favoritos.filter(favId => favId !== idNumero);
+    estrellaElement.src = "../Img/estrella.png";
     alert(`${name} ha sido eliminado de tus favoritos.`);
   } else {
-    // Si no está en favoritos, agregarlo
-    const nuevoFavorito = { id, name, image };
-    favoritos.push(nuevoFavorito);
-
-    // Guardar los favoritos en localStorage
-    localStorage.setItem("favoritos", JSON.stringify(favoritos));
-
-    // Cambiar la imagen de la estrella a la de "estrella-fav.png"
-    estrellaElement.src = "../Img/estrella-fav.png"; // Imagen de estrella seleccionada
-
+    usuarios[usuarioIndex].favoritos.push(idNumero);
+    estrellaElement.src = "../Img/estrella-fav.png";
     alert(`${name} ha sido añadido a tus favoritos.`);
   }
+
+  // Guardar cambios
+  usuarios[usuarioIndex].favoritos = usuarios[usuarioIndex].favoritos.map(fav => Number(fav));
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
+
 
 // Redirige al detalle del personaje _____________________________________________________________________________________________________
 function verDetalle(id) {
@@ -125,6 +133,8 @@ async function obtenerPersonajes() {
     const respuesta = await fetch("https://akabab.github.io/starwars-api/api/all.json");
     const personajes = await respuesta.json();
 
+    // 🔥 Guardamos la lista completa en localStorage
+    localStorage.setItem("personajes", JSON.stringify(personajes));
 
     return personajes;
   } catch (error) {
@@ -132,6 +142,7 @@ async function obtenerPersonajes() {
     return [];
   }
 }
+
 
 // Establece los enlaces de la nav con el nombre del usuario ____________________________________________________________________________
 function aplicarLinksEstáticosConNombre(nombre) {

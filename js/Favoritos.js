@@ -1,14 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const nombre = params.get("nombre");
-
-  aplicarLinksEstáticosConNombre();
-
+  const correoLogueado = localStorage.getItem("correoLogueado");
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const personajes = JSON.parse(localStorage.getItem("personajes")) || [];
 
-  const usuario = usuarios.find(u => u.nombre === nombre);
+  const usuario = usuarios.find(u => u.correo === correoLogueado);
   const contenedor = document.getElementById("favoritos-container");
+
+  aplicarLinksEstáticosConNombre();
 
   if (!usuario) {
     contenedor.textContent = "Usuario no encontrado.";
@@ -21,12 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const favoritosData = usuario.favoritos
-    .map(id => personajes.find(p => p.id === id))
+    .map(id => personajes.find(p => p.id === Number(id)))
     .filter(Boolean);
 
   mostrarFavoritos(favoritosData);
   configurarBuscador(favoritosData);
 });
+
+
 
 function verDetalle(id, nombre) {
   window.location.href = `Element.html?id=${id}&nombre=${encodeURIComponent(nombre)}`;
@@ -44,10 +44,11 @@ function mostrarFavoritos(lista = []) {
     element.className = "element";
 
     element.innerHTML = `
-      <div><img src="${personaje.imagen}" alt="${personaje.nombre}" width="340px" height="450px"></div>
-      <div id="texto">
-        <h2 id="h2b">${personaje.nombre.toUpperCase()}</h2>
-      </div>
+      <div><img src="${personaje.image}" alt="${personaje.name}" width="340px" height="450px"></div>
+<div id="texto">
+  <h2 id="h2b">${personaje.name.toUpperCase()}</h2>
+</div>
+
       <div id="boto-estrella">
         <div><button id="Boton" onclick="verDetalle(${personaje.id}, '${nombre}')">MÁS DETALLES</button></div>
         <div id="estrella"><img src="../Img/estrella-fav.png" alt="estrella" width="55px"></div>
@@ -87,8 +88,9 @@ function configurarBuscador(favoritosData) {
       mostrarFavoritos(favoritosData);
     } else {
       const filtrados = favoritosData.filter(p =>
-        p.nombre.toLowerCase().includes(texto)
-      );
+  p.name.toLowerCase().includes(texto)
+);
+
       mostrarFavoritos(filtrados);
     }
   });
