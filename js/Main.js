@@ -38,7 +38,7 @@ const contenedor = document.getElementById("contenedor-integrantes");
 
 contenedor.innerHTML = equipo.map(integrante => integrante.render()).join("");
 
-//ontacto________________________________________________________________________________________________________
+//Contacto________________________________________________________________________________________________________
 
 
 window.onload = function () {
@@ -47,15 +47,30 @@ window.onload = function () {
   boton.onclick = function (evento) {
     evento.preventDefault();
 
-    var nombre = document.getElementsByName("username")[0].value;
-    var correo = document.getElementsByName("email")[0].value;
-    var mensaje = document.getElementsByName("password")[0].value;
+    var correo = document.getElementsByName("email")[0].value.trim();
+    var mensaje = document.getElementsByName("password")[0].value.trim();
 
-    if (nombre === "" || correo === "" || mensaje === "") {
-      alert("⚠️ Por favor llena todos los campos.");
+    var correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (correo === "") {
+      alert("⚠️ Por favor ingresa tu correo.");
+    } else if (!correoValido.test(correo)) {
+      alert("⚠️ Por favor ingresa un correo válido (ej: nombre@dominio.com).");
     } else {
+      // Guardar el mensaje en localStorage
+      let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+      comentarios.push({
+        correo: correo,
+        mensaje: mensaje,
+        fecha: new Date().toLocaleString()
+      });
+
+      localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
       alert("✨✨✨ ¡Tu mensaje fue enviado con éxito! ✨✨✨");
       document.forms[0].reset();
     }
   };
 };
+
