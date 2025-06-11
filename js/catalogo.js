@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Mostrar bienvenida solo si no se ha mostrado aún en esta sesión
+  // Mostrar bienvenida solo si no se ha mostrado aún en esta sesión____________________________________________________________________
   if (!sessionStorage.getItem("saludoMostrado")) {
     alert(`👋 ¡Bienvenido, ${usuario.nombre}!`);
     sessionStorage.setItem("saludoMostrado", "true");
@@ -37,29 +37,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
 // Mostrar los personajes en el catálogo ____________________________________________________________________________________________
 async function mostrarCatalogo(lista = []) {
   const contenedor = document.getElementById("container-mayor");
-  contenedor.innerHTML = "";
+  contenedor.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevas tarjetas
 
-  // Creacion de filas de tarjetas y su contenido __________________________________________________________________________________
+  // Recuperar los favoritos del localStorage
+  const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+  // Creación de filas de tarjetas y su contenido __________________________________________________________________________________
   for (let i = 0; i < lista.length; i += 3) {
     const fila = document.createElement("div");
-    fila.className = "container-1";
+    fila.className = "container-1"; 
 
     for (let j = i; j < i + 3 && j < lista.length; j++) {
       const p = lista[j];
 
       const tarjeta = document.createElement("div");
-      tarjeta.className = "element";
+      tarjeta.className = "element"; 
+
+      // Verificar si el personaje está en favoritos
+      const estaEnFavoritos = favoritos.some(f => f.id === p.id);
+
+      //cambiar la imagen de la estrella
+      const estrellaImagen = estaEnFavoritos ? "../Img/estrella-fav.png" : "../Img/estrella.png";
 
       tarjeta.innerHTML = `
         <div><img src="${p.image}" alt="${p.name}" width="340px" height="450px"></div>
         <div id="texto"><h2 id="h2b">${p.name.toUpperCase()}</h2></div>
         <div id="boto-estrella">
           <div><button id="Boton" onclick="verDetalle(${p.id})">MÁS DETALLES</button></div>
-          <div id="estrella"><img src="../Img/estrella.png" alt="favorito" width="55px"></div>
+          <div id="estrella">
+            <img src="${estrellaImagen}" alt="favorito" width="55px" onclick="agregarOEliminarDeFavoritos(${p.id}, '${p.name}', '${p.image}', this)">
+          </div>
         </div>
       `;
 
@@ -70,12 +80,44 @@ async function mostrarCatalogo(lista = []) {
   }
 }
 
-// Redirige al detalle del personaje___________________________________________________________________________________________________
+// Función para agregar o eliminar un personaje de los favoritos
+function agregarOEliminarDeFavoritos(id, name, image, estrellaElement) {
+  const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+  // Verificar si el personaje ya está en los favoritos
+  const personajeYaFavorito = favoritos.some(p => p.id === id);
+
+  if (personajeYaFavorito) {
+    // Eliminar del array de favoritos
+    const favoritosActualizados = favoritos.filter(p => p.id !== id);
+    localStorage.setItem("favoritos", JSON.stringify(favoritosActualizados));
+
+    // Cambiar la imagen de la estrella a la de "estrella.png"
+    estrellaElement.src = "../Img/estrella.png"; // Imagen de estrella desmarcada
+
+    alert(`${name} ha sido eliminado de tus favoritos.`);
+  } else {
+    // Si no está en favoritos, agregarlo
+    const nuevoFavorito = { id, name, image };
+    favoritos.push(nuevoFavorito);
+
+    // Guardar los favoritos en localStorage
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+
+    // Cambiar la imagen de la estrella a la de "estrella-fav.png"
+    estrellaElement.src = "../Img/estrella-fav.png"; // Imagen de estrella seleccionada
+
+    alert(`${name} ha sido añadido a tus favoritos.`);
+  }
+}
+
+// Redirige al detalle del personaje _____________________________________________________________________________________________________
 function verDetalle(id) {
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
   window.location.href = `Element.html?id=${id}&nombre=${nombre}`;
 }
+
 
 // Función para obtener los personajes desde la API_______________________________________________________________________________________
 async function obtenerPersonajes() {
