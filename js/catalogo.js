@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 // Mostrar los personajes en el catálogo ____________________________________________________________________________________________
 async function mostrarCatalogo(lista = []) {
   const contenedor = document.getElementById("container-mayor");
@@ -44,26 +43,25 @@ async function mostrarCatalogo(lista = []) {
 
   // Recuperar los favoritos del localStorage
   const correoLogueado = localStorage.getItem("correoLogueado");
-const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-const usuario = usuarios.find(u => u.correo === correoLogueado);
-const favoritos = usuario?.favoritos?.map(f => Number(f)) || [];
-
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const usuario = usuarios.find(u => u.correo === correoLogueado);
+  const favoritos = usuario?.favoritos || [];
 
   // Creación de filas de tarjetas y su contenido __________________________________________________________________________________
   for (let i = 0; i < lista.length; i += 3) {
     const fila = document.createElement("div");
-    fila.className = "container-1"; 
+    fila.className = "container-1"; // Clase para cada fila de 3 elementos
 
     for (let j = i; j < i + 3 && j < lista.length; j++) {
       const p = lista[j];
 
       const tarjeta = document.createElement("div");
-      tarjeta.className = "element"; 
+      tarjeta.className = "element"; // Clase para cada tarjeta
 
       // Verificar si el personaje está en favoritos
-      const estaEnFavoritos = favoritos.some(f => f.id === p.id);
+      const estaEnFavoritos = favoritos.includes(p.id);
 
-      //cambiar la imagen de la estrella
+      // Cambiar la imagen de la estrella
       const estrellaImagen = estaEnFavoritos ? "../Img/estrella-fav.png" : "../Img/estrella.png";
 
       tarjeta.innerHTML = `
@@ -91,7 +89,7 @@ function agregarOEliminarDeFavoritos(id, name, image, estrellaElement) {
 
   const usuarioIndex = usuarios.findIndex(u => u.correo === correoLogueado);
   if (usuarioIndex === -1) {
-    alert("No has iniciado sesión."); 
+    alert("No has iniciado sesión.");
     return;
   }
 
@@ -99,25 +97,24 @@ function agregarOEliminarDeFavoritos(id, name, image, estrellaElement) {
     usuarios[usuarioIndex].favoritos = [];
   }
 
-  const favoritos = usuarios[usuarioIndex].favoritos.map(fav => Number(fav));
-  const idNumero = Number(id);
-  const estaEnFavoritos = favoritos.includes(idNumero);
+  const favoritos = usuarios[usuarioIndex].favoritos;
+  const estaEnFavoritos = favoritos.includes(id);
 
   if (estaEnFavoritos) {
-    usuarios[usuarioIndex].favoritos = favoritos.filter(favId => favId !== idNumero);
-    estrellaElement.src = "../Img/estrella.png";
+    // Eliminar del array de favoritos
+    usuarios[usuarioIndex].favoritos = favoritos.filter(favId => favId !== id);
+    estrellaElement.src = "../Img/estrella.png"; // Cambiar la imagen a la de estrella desmarcada
     alert(`${name} ha sido eliminado de tus favoritos.`);
   } else {
-    usuarios[usuarioIndex].favoritos.push(idNumero);
-    estrellaElement.src = "../Img/estrella-fav.png";
+    // Si no está en favoritos, agregarlo
+    usuarios[usuarioIndex].favoritos.push(id);
+    estrellaElement.src = "../Img/estrella-fav.png"; // Cambiar la imagen a la de estrella marcada
     alert(`${name} ha sido añadido a tus favoritos.`);
   }
 
   // Guardar cambios
-  usuarios[usuarioIndex].favoritos = usuarios[usuarioIndex].favoritos.map(fav => Number(fav));
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
-
 
 // Redirige al detalle del personaje _____________________________________________________________________________________________________
 function verDetalle(id) {
