@@ -22,7 +22,7 @@ function cerrarSesion() {
 // Verificar login (solo con correo y contraseña)
 function iniciarSesion(correo, contraseña) {
   if (!correo || !contraseña) {
-    return { exito: false, mensaje: "🌌Correo y contraseña son obligatorios." };
+    return { exito: false, mensaje: "🌌Correo y contraseña son obligatorios" };
   }
 
   const usuarios = cargarUsuarios();
@@ -33,7 +33,7 @@ function iniciarSesion(correo, contraseña) {
   );
 
   if (!usuarioEncontrado) {
-    return { exito: false, mensaje: "❌Correo o contraseña incorrectos." };
+    return { exito: false, mensaje: "❌Correo o contraseña incorrectos" };
   }
 
   guardarSesion(usuarioEncontrado.correo);

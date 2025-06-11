@@ -11,22 +11,22 @@ function guardarUsuarios(listaUsuarios) {
 
 function registrarUsuario(nombre, correo, contraseña, confirmar) {
   if (!nombre || !correo || !contraseña || !confirmar) {
-    return { exito: false, mensaje: "🪐Todos los campos son obligatorios." };
+    return { exito: false, mensaje: "🪐Todos los campos son obligatorios" };
   }
 
   const usuarios = cargarUsuarios();
   const yaExiste = usuarios.some((u) => u.correo === correo);
   if (yaExiste) {
-    return { exito: false, mensaje: "✨Este correo ya está registrado." };
+    return { exito: false, mensaje: "✨Este correo ya está registrado" };
   }
 
   if (contraseña !== confirmar) {
-    return { exito: false, mensaje: "💥Las contraseñas no coinciden." };
+    return { exito: false, mensaje: "💥Las contraseñas no coinciden" };
   }
 
   usuarios.push({ nombre, correo, contraseña });
   guardarUsuarios(usuarios);
-  return { exito: true, mensaje: "🚀Usuario registrado correctamente." };
+  return { exito: true, mensaje: "🚀Usuario registrado correctamente" };
 }
 
 document.getElementById("btn-registrar").addEventListener("click", () => {
@@ -44,7 +44,7 @@ document.getElementById("btn-registrar").addEventListener("click", () => {
 if (resultado.exito) {
   btnIrLogin.style.display = "inline";
 
-  // ✅ Redirige al hacer clic
+  //Redirige al hacer clic
   btnIrLogin.addEventListener("click", () => {
     window.location.href = "Login.html";
   });

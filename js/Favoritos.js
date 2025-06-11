@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   aplicarLinksEstáticosConNombre();
 
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const personajes = JSON.parse(localStorage.getItem("personajes")) || [];
+
   const usuario = usuarios.find(u => u.nombre === nombre);
   const contenedor = document.getElementById("favoritos-container");
 
@@ -17,15 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  favoritosData = usuario.favoritos.map(id => personajes.find(p => p.id === id)).filter(Boolean);
+  const favoritosData = usuario.favoritos
+    .map(id => personajes.find(p => p.id === id))
+    .filter(Boolean);
+
   mostrarFavoritos(favoritosData);
+  configurarBuscador(favoritosData);
 });
 
 function verDetalle(id, nombre) {
   window.location.href = `Element.html?id=${id}&nombre=${encodeURIComponent(nombre)}`;
 }
-
-// Muestra los personajes __________________________________________________________________________________________________________________________________
 
 function mostrarFavoritos(lista = []) {
   const contenedor = document.getElementById("favoritos-container");
@@ -53,8 +58,6 @@ function mostrarFavoritos(lista = []) {
   });
 }
 
-// Establece los enlaces de la nav con el nombre del usuario ________________________________________________________________________________________
-
 function aplicarLinksEstáticosConNombre() {
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
@@ -65,41 +68,28 @@ function aplicarLinksEstáticosConNombre() {
   const favoritos = document.getElementById("link-favoritos");
   const perfil = document.getElementById("link-perfil");
   const icono = document.getElementById("link-icono");
-  const imagenPerfil = document.getElementById("imagenperfil");
 
   if (catalogo) catalogo.href = `Catalogo.html?nombre=${nombre}`;
-  if (favoritos) favoritos.href = ` Catalogo.html?nombre=${nombre}`;
+  if (favoritos) favoritos.href = `Favoritos.html?nombre=${nombre}`;
   if (perfil) perfil.href = `Profile.html?nombre=${nombre}`;
   if (icono) icono.href = `Profile.html?nombre=${nombre}`;
-
-
-  const usuario = usuarios.find(u => u.nombre === nombre);
-
-  // Cambiar la imagen si el usuario existe y tiene foto _________________________________________________________________________________________________
-
-  if (usuario && usuario.foto && imagenPerfil) {
-    imagenPerfil.src = usuario.foto;
-    imagenPerfil.alt = `Foto de perfil de ${nombre}`;
-  }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  mostrarCatalogo();
-  aplicarLinksEstáticosConNombre();
-});
+function configurarBuscador(favoritosData) {
+  const buscador = document.getElementById("input-buscador");
 
-// Buscador _________________________________________________________________________________________________________________________________________________
+  if (!buscador) return;
 
-document.getElementById("input-buscador").addEventListener("input", () => {
-  const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
+  buscador.addEventListener("input", () => {
+    const texto = buscador.value.toLowerCase().trim();
 
-  if (texto === "") {
-    mostrarFavoritos(favoritosData);
-  } else {
-    const filtrados = favoritosData.filter(p =>
-      p.nombre.toLowerCase().includes(texto)
-    );
-    mostrarFavoritos(filtrados);
-  }
-});
-
+    if (texto === "") {
+      mostrarFavoritos(favoritosData);
+    } else {
+      const filtrados = favoritosData.filter(p =>
+        p.nombre.toLowerCase().includes(texto)
+      );
+      mostrarFavoritos(filtrados);
+    }
+  });
+}
