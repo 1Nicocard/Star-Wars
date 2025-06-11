@@ -75,17 +75,21 @@ header {
 
 /* Imagen del personaje____________________________________________________________________________________________ */
 .image-container {
-    margin-top: 20px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
 }
 
 .character-image {
     width: 80%;
+    border-radius: 30px;
     max-width: 600px;
 }
 
 /* Información del personaje_________________________________________________________________________________________ */
+#detalle-personaje{
+    display: flex;
+}
 .info {
     width: 800px;
     padding: 10px;
@@ -97,6 +101,7 @@ header {
 
     font-size: 22px;
 }
+
 
 /* Nombre del personaje grande______________________________________________________________________________________ */
 .name {
