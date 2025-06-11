@@ -1,42 +1,44 @@
-// Mostrar los personajes____________________________________________________________________________________________________________________________
+document.addEventListener("DOMContentLoaded", () => {
+  const correoLogueado = localStorage.getItem("correoLogueado");
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-function mostrarCatalogo(lista = personajes) {
-  const contenedor = document.getElementById("container-mayor");
-  contenedor.innerHTML = "";
-
-  for (let i = 0; i < lista.length; i += 3) {
-    const fila = document.createElement("div");
-    fila.className = "container-1";
-
-    for (let j = i; j < i + 3 && j < lista.length; j++) {
-      const p = lista[j];
-
-      const tarjeta = document.createElement("div");
-      tarjeta.className = "element";
-
-      tarjeta.innerHTML = `
-        <div><img src="${p.imagen}" alt="${p.nombre}" width="340px" height="450px"></div>
-        <div id="texto"><h2 id="h2b">${p.nombre.toUpperCase()}</h2></div>
-        <div id="boto-estrella">
-          <div><button id="Boton" onclick="verDetalle(${p.id})">MÁS DETALLES</button></div>
-          <div id="estrella"><img src="../Img/estrella.png" alt="favorito" width="55px"></div>
-        </div>
-      `;
-
-      fila.appendChild(tarjeta);
-    }
-
-    contenedor.appendChild(fila);
+  if (!correoLogueado) {
+    alert("⚠️ No hay sesión activa. Inicia sesión para ver tu catálogo.");
+    window.location.href = "Login.html";
+    return;
   }
+
+  const usuario = usuarios.find(u => u.correo === correoLogueado);
+  if (!usuario) {
+    alert("❌ Usuario no encontrado.");
+    return;
+  }
+
+  // Mostrar bienvenida solo si no se ha mostrado aún en esta sesión
+if (localStorage.getItem("mostrarSaludo") === "true") {
+  alert(`👋 ¡Bienvenido, ${usuario.nombre}!`);
+  localStorage.removeItem("mostrarSaludo");
 }
 
-// Redirige al detalle del personaje _____________________________________________________________________________________________________________
-
-function verDetalle(id) {
+  // Asegurar que el nombre esté en la URL
   const params = new URLSearchParams(window.location.search);
-  const nombre = params.get("nombre");
-  window.location.href = `Element.html?id=${id}&nombre=${nombre}`;
-}
+  const yaTieneNombreEnURL = params.get("nombre");
+
+  if (!yaTieneNombreEnURL) {
+    window.location.search = `?nombre=${encodeURIComponent(usuario.nombre)}`;
+    return;
+  }
+
+  aplicarLinksEstáticosConNombre(usuario.nombre);
+  obtenerPersonajes().then(personajes => {
+    mostrarCatalogo(personajes);
+  });
+});
+
+
+
+
+
 
 
 // Establece los enlaces de la nav con el nombre del usuario ________________________________________________________________________________________
@@ -57,14 +59,8 @@ function aplicarLinksEstáticosConNombre() {
   if (icono) icono.href = `Profile.html?nombre=${nombre}`;
 
 
-  const usuario = usuarios.find(u => u.nombre === nombre);
 
-  // Cambiar la imagen si el usuario existe y tiene foto _________________________________________________________________________________________________
 
-  if (usuario && usuario.foto && imagenPerfil) {
-    imagenPerfil.src = usuario.foto;
-    imagenPerfil.alt = `Foto de perfil de ${nombre}`;
-  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,19 +68,3 @@ document.addEventListener("DOMContentLoaded", () => {
   aplicarLinksEstáticosConNombre();
 });
 
-// Buscador _________________________________________________________________________________________________________________________________________________
-
-document.getElementById("input-buscador").addEventListener("input", () => {
-  const texto = document.getElementById("input-buscador").value.toLowerCase().trim();
-
-  if (texto === "") {
-    mostrarCatalogo();
-  } else {
-    const personajesFiltrados = personajes.filter(p =>
-      p.nombre.toLowerCase().includes(texto)
-    );
-    mostrarCatalogo(personajesFiltrados);
-  }
-});
-
-window.addEventListener("DOMContentLoaded", aplicarLinksEstáticosConNombre);
