@@ -1,26 +1,15 @@
-// Espera a que el DOM esté completamente cargado________________________________________________________________________________________________________
-
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Obtiene el correo del usuario logueado desde localStorage__________________________________________________________________________________________
+  // Obtiene el correo, usuario y personajes desde localStorage__________________________________________________________________________________________
 
   const correoLogueado = localStorage.getItem("correoLogueado");
-
-
-  // Obtiene los usuarios y personajes desde localStorage o arreglos vacíos si no existen_______________________________________________________________
-
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const personajes = JSON.parse(localStorage.getItem("personajes")) || [];
 
   // Busca el usuario que coincide con el correo logueado_____________________________________________________________________________________________
 
   const usuario = usuarios.find(u => u.correo === correoLogueado);
-
-  // Selecciona el contenedor donde se mostrarán los personajes favoritos_____________________________________________________________________________
-
   const contenedor = document.getElementById("favoritos-container");
-
-  // Asigna los enlaces con el nombre como parámetro en la URL________________________________________________________________________________________
 
   aplicarLinksEstáticosConNombre();
 
@@ -38,11 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Obtiene los datos completos de los personajes favoritos del usuario______________________________________________________________________________
+ 
+// Crea un arreglo con los personajes favoritos completos____________________________________________________________
+const favoritosData = []; 
 
-  const favoritosData = usuario.favoritos
-    .map(id => personajes.find(p => p.id === Number(id)))  // Busca cada personaje por ID
-    .filter(Boolean);                                     // Elimina posibles valores nulos
+for (let i = 0; i < usuario.favoritos.length; i++) {
+  const idFavorito = Number(usuario.favoritos[i]); 
+  const personaje = personajes.find(p => p.id === idFavorito); 
+  if (personaje) {
+    favoritosData.push(personaje); 
+  }
+}
+
 
   // Muestra los personajes favoritos en pantalla____________________________________________________________________________________________________
 
@@ -84,7 +80,7 @@ function mostrarFavoritos(lista = []) {
       </div>
     `;
 
-    contenedor.appendChild(element); // Añade la tarjeta al contenedor_____________________________________________________________________________
+    contenedor.appendChild(element); 
   });
 }
 
@@ -100,7 +96,7 @@ function aplicarLinksEstáticosConNombre() {
   const params = new URLSearchParams(window.location.search);
   const nombre = params.get("nombre");
 
-  if (!nombre) return; // Si no hay nombre, no hace nada________________________________________________________________________________________________
+  if (!nombre) return; 
 
   // Asigna los href a cada enlace de navegación_________________________________________________________________________________________________________
 
