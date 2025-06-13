@@ -1,7 +1,6 @@
 
 // Mostrar la información del usuario que inició sesión________________________________________________________________________________________
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const correoLogueado = localStorage.getItem("correoLogueado"); // Obtener el correo del usuario que inició sesión
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || []; // Obtener todos los usuarios registrados

@@ -214,9 +214,13 @@ input {
     grid-template-columns: repeat(3, 1fr);
     gap: 115px;
     padding: 40px 40px;
-    width: 100%;
-    max-width: 1400px;
+    width: 500px;
     margin: auto;
+}
+
+
+#favoritos-container img {
+    border-radius: 40px;
 }
 
 /*Filas de containers_____________________________________________________________________________________________________________*/
@@ -226,6 +230,7 @@ input {
     justify-content: center;
     gap: 115px;
     margin-bottom: 100px;
+    width: 100px;
 
 }
 

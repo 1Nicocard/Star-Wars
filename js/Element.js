@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function obtenerPersonajes() {
   try {
     const respuesta = await fetch("https://akabab.github.io/starwars-api/api/all.json");
-    const personajes = await respuesta.json(); // Obtener los datos de la API
+    const personajes = await respuesta.json();
     return personajes;
   } catch (error) {
     console.error("Error al obtener los personajes:", error);

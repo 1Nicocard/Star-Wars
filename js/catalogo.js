@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sessionStorage.setItem("saludoMostrado", "true");
   }
 
-  // Asegurar que el nombre esté en la URL
+  // Asegurar que el nombre esté en la URL_____________________________________________________________________________________________
   const params = new URLSearchParams(window.location.search);
   const yaTieneNombreEnURL = params.get("nombre");
 
@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Mostrar los personajes en el catálogo ____________________________________________________________________________________________
-async function mostrarCatalogo(lista = []) {
-  const contenedor = document.getElementById("container-mayor");
-  contenedor.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevas tarjetas
+  async function mostrarCatalogo(lista = []) {
+    const contenedor = document.getElementById("container-mayor");
 
-  // Recuperar los favoritos del localStorage
+
+  // Recuperar los favoritos del localStorage_______________________________________________________________________________________
   const correoLogueado = localStorage.getItem("correoLogueado");
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const usuario = usuarios.find(u => u.correo === correoLogueado);
@@ -50,18 +50,18 @@ async function mostrarCatalogo(lista = []) {
   // Creación de filas de tarjetas y su contenido __________________________________________________________________________________
   for (let i = 0; i < lista.length; i += 3) {
     const fila = document.createElement("div");
-    fila.className = "container-1"; // Clase para cada fila de 3 elementos
+    fila.className = "container-1";
 
     for (let j = i; j < i + 3 && j < lista.length; j++) {
       const p = lista[j];
 
       const tarjeta = document.createElement("div");
-      tarjeta.className = "element"; // Clase para cada tarjeta
+      tarjeta.className = "element";
 
-      // Verificar si el personaje está en favoritos
+      // Verificar si el personaje está en favoritos_________________________________________________________________________________________
       const estaEnFavoritos = favoritos.includes(p.id);
 
-      // Cambiar la imagen de la estrella
+      // Cambiar la imagen de la estrella____________________________________________________________________________________________________
       const estrellaImagen = estaEnFavoritos ? "../Img/estrella-fav.png" : "../Img/estrella.png";
 
       tarjeta.innerHTML = `
@@ -82,7 +82,7 @@ async function mostrarCatalogo(lista = []) {
   }
 }
 
-// Función para agregar o eliminar un personaje de los favoritos
+// Función para agregar o eliminar un personaje de los favoritos_______________________________________________________________________________
 function agregarOEliminarDeFavoritos(id, name, image, estrellaElement) {
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const correoLogueado = localStorage.getItem("correoLogueado");
@@ -101,18 +101,18 @@ function agregarOEliminarDeFavoritos(id, name, image, estrellaElement) {
   const estaEnFavoritos = favoritos.includes(id);
 
   if (estaEnFavoritos) {
-    // Eliminar del array de favoritos
+    // Eliminar del array de favoritos____________________________________________________________________________________________________
     usuarios[usuarioIndex].favoritos = favoritos.filter(favId => favId !== id);
-    estrellaElement.src = "../Img/estrella.png"; // Cambiar la imagen a la de estrella desmarcada
+    estrellaElement.src = "../Img/estrella.png"; 
     alert(`${name} ha sido eliminado de tus favoritos.`);
   } else {
-    // Si no está en favoritos, agregarlo
+    // Si no está en favoritos, agregarlo__________________________________________________________________________________________________
     usuarios[usuarioIndex].favoritos.push(id);
-    estrellaElement.src = "../Img/estrella-fav.png"; // Cambiar la imagen a la de estrella marcada
+    estrellaElement.src = "../Img/estrella-fav.png";
     alert(`${name} ha sido añadido a tus favoritos.`);
   }
 
-  // Guardar cambios
+  // Guardar ______________________________________________________________________________________________________________________________
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
@@ -130,7 +130,7 @@ async function obtenerPersonajes() {
     const respuesta = await fetch("https://akabab.github.io/starwars-api/api/all.json");
     const personajes = await respuesta.json();
 
-    // 🔥 Guardamos la lista completa en localStorage
+    // Guardamos la lista completa en localStorage _______________________________________________________________________________________
     localStorage.setItem("personajes", JSON.stringify(personajes));
 
     return personajes;
